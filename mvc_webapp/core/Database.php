@@ -1,5 +1,5 @@
 <?php
-require_once dirname( __DIR__ ).'../../config/Constants.php';
+require dirname( __DIR__ ).'../../config/constants.php';
 
 class Database
 {
