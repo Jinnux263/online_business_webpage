@@ -1,7 +1,7 @@
 <?php
 require_once dirname( __DIR__ ).'/controller/base_controller/BaseController.php';
 
-class Authentication extends BaseController
+class Home extends BaseController
 {
   function __construct()
   {

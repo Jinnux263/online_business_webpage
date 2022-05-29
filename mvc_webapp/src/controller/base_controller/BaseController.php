@@ -5,6 +5,11 @@ abstract class BaseController
 
   //Default method for any controllers
   abstract public function index();
+  
+  
+  function error() {
+    echo 'Some thing went wrong...';
+  }
 
 
   // Hàm hiển thị kết quả ra cho người dùng.
