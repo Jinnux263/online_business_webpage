@@ -11,8 +11,8 @@ if (isset($_GET['controller'])) {
     $action = 'index';
   }
 } else {
-  $controller = 'pages';
-  $action = 'home';
+  $controller = 'Home';
+  $action = 'index';
 }
 require_once dirname( __DIR__ ).'/src/routes/Routes.php';
 

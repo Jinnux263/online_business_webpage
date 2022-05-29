@@ -18,13 +18,8 @@ if (!array_key_exists($controller, $controllers) || !in_array($action, $controll
   $action = 'error';
 }
 
-
-// Sẽ xóa phần này đi, này chỉ để tạm thôi
-$controller = "Home";
-$action = "index";
-
 // Nhúng file định nghĩa controller vào để có thể dùng được class định nghĩa trong file đó
-require_once  dirname( __DIR__ ).'/controller/' . $controller . '.php';
+require_once  dirname( __DIR__ ).'/controllers/' . $controller . '.php';
 
 $klass = $controller;
 $controller = new $klass;
