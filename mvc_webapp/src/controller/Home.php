@@ -5,12 +5,13 @@ class Home extends BaseController
 {
   function __construct()
   {
-    $this->folder = 'pages';
+    $this->folder = 'screen_homepage';
   }
 
   public function index()
   {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
+    $this->render('MainScreen');
+    // include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
   }
 }
 
