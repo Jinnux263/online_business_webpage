@@ -9,5 +9,11 @@
 
 <body>
     <p> Hello World, This is an basic template </p>
+
+    <p>
+    <?php 
+        echo $_SERVER['DOCUMENT_ROOT'];
+    ?>
+    </p>
 </body>
 </html>
