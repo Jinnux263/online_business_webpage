@@ -19,7 +19,7 @@ if (!array_key_exists($controller, $controllers) || !in_array($action, $controll
 }
 
 // Nhúng file định nghĩa controller vào để có thể dùng được class định nghĩa trong file đó
-require_once  dirname( __DIR__ ).'/controllers/' . $controller . '.php';
+require_once  APP_ROOT.'/src/controllers/' . $controller . '.php';
 
 $klass = $controller;
 $controller = new $klass;

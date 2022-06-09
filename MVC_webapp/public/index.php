@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-require_once dirname( __DIR__ ).'/src/includes/conn.php';
+require_once __DIR__ .'/../config/Constants.php';
+// require_once APP_ROOT.'/../core/Database.php';
+require_once APP_ROOT.'/core/Database.php';
 
 if (isset($_GET['controller'])) {
   $controller = $_GET['controller'];
@@ -14,7 +16,7 @@ if (isset($_GET['controller'])) {
   $controller = 'Home';
   $action = 'index';
 }
-require_once dirname( __DIR__ ).'/src/routes/Routes.php';
+require_once APP_ROOT.'/src/routes/Routes.php';
 
 
 ?>

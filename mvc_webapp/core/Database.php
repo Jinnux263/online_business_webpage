@@ -1,6 +1,4 @@
 <?php
-require dirname( __DIR__ ).'../../config/constants.php';
-
 class Database
 {
 	public $conn = NULL;
