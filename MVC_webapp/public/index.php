@@ -13,7 +13,7 @@ if (isset($_GET['controller'])) {
     $action = 'index';
   }
 } else {
-  $controller = 'Home';
+  $controller = 'HomeController';
   $action = 'index';
 }
 require_once APP_ROOT.'/src/routes/Routes.php';

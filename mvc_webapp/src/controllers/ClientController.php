@@ -1,7 +1,7 @@
 <?php
 require_once dirname( __DIR__ ).'/controller/base_controller/BaseController.php';
 
-class User extends BaseController
+class ClientController extends BaseController
 {
   function __construct()
   {

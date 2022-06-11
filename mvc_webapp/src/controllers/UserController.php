@@ -1,7 +1,7 @@
 <?php
 require_once dirname( __DIR__ ).'/controller/base_controller/BaseController.php';
 
-class Client extends BaseController
+class UserController extends BaseController
 {
   function __construct()
   {
@@ -27,6 +27,7 @@ class Client extends BaseController
   {
     include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
   }
+
 }
 
 ?>

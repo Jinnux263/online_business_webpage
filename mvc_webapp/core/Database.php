@@ -18,6 +18,13 @@ class Database
 		}
 		$this->conn->set_charset("utf8");
 	}
+
+	public function getInstance(){
+		if (!$this->conn) {
+			$this->connect();
+		}
+		return $this->conn;
+	}
         // Hàm đóng kết nối CSDL
         public function closeDatabase()
 	{

@@ -1,6 +1,6 @@
 <?php
 
-define('BASECTRL_TO_VIEWS', __DIR__ . '/../../views/');
+define('BASECTRL_TO_VIEWS', APP_ROOT . '/src/views/');
 
 abstract class BaseController
 {
