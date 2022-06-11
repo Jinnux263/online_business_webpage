@@ -19,13 +19,13 @@
     <script src="minified/formats/bbcode.js"></script>
     <script src="minified/formats/xhtml.js"></script>
     <link rel="stylesheet" href="deps/flickity.css" media="screen">
-    <link rel="stylesheet" type="text/css" href=<?php echo APP_ROOT."/public/css/style.css" ?>>
-    <link rel="stylesheet" type="text/css" href=<?php echo APP_ROOT."/public/css/header.css" ?>>
-    <link rel="stylesheet" type="text/css" href=<?php echo APP_ROOT."/public/css/footer.css" ?>>
-    <link rel="stylesheet" type="text/css" href="<?php echo APP_ROOT?>/public/css/<?php echo $path; ?>.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/header.css">
+    <link rel="stylesheet" type="text/css"href="/mvc_webapp/public/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/<?php echo $path; ?>.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
-    <script defer src=<?php echo APP_ROOT."/public/js/deps/index.js" ?>></script>
+    <script defer src="/mvc_webapp/public/js/deps/index.js"></script>
 </head>
 
 <body onload="initLoad('<?php echo $path; ?>')">

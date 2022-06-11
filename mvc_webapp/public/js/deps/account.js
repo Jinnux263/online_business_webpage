@@ -6,7 +6,7 @@ addCSS = (option, cssLinkIndex) => {
     let newCSS = document.createElement("link");
     newCSS.setAttribute("rel", "stylesheet");
     newCSS.setAttribute("type", "text/css");
-    newCSS.setAttribute("href", `css/accountContent/${option}.css`);
+    newCSS.setAttribute("href", `/mvc_webapp/public/css/accountContent/${option}.css`);
 
     if (!oldCSS)
         document.getElementsByTagName(`head`).item(0).appendChild(newCSS);

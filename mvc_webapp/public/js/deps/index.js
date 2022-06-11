@@ -16,7 +16,7 @@ pageTitle = {
 initLoad = (path) => {
     $("#app").animate({ opacity: 0 }, 0);
     $(".page-title").animate({ opacity: 0 }, 0);
-    $("#app").load(`content/${path}.php`);
+    $("#app").load(`/mvc_webapp/src/views/content/${path}.php`);
     document.title = `${pageTitle[path]} - play im@s`;
 
     setTimeout(() => {
@@ -39,7 +39,7 @@ changeCSS = (path, cssLinkIndex) => {
     let newlink = document.createElement("link");
     newlink.setAttribute("rel", "stylesheet");
     newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", `css/${path}.css`);
+    newlink.setAttribute("href", `/mvc_webapp/public/css/${path}.css`);
 
     document
         .getElementsByTagName(`head`)
@@ -57,7 +57,7 @@ load = (path) => {
     $("#app").animate({ opacity: 0 }, 400);
     $(".page-title").animate({ color: "transparent" }, 400);
     setTimeout(() => {
-        $("#app").load(`content/${path}.php`);
+        $("#app").load(`/mvc_webapp/public/content/${path}.php`);
         changeCSS(path, 5);
         document.title = `${pageTitle[path]} - play im@s`;
 
