@@ -16,7 +16,7 @@ pageTitle = {
 initLoad = (path) => {
     $("#app").animate({ opacity: 0 }, 0);
     $(".page-title").animate({ opacity: 0 }, 0);
-    $("#app").load(`/mvc_webapp/src/views/content/${path}.php`);
+    $("#app").load(`/mvc_webapp/public/content/${path}.php`);
     document.title = `${pageTitle[path]} - play im@s`;
 
     setTimeout(() => {
@@ -51,13 +51,15 @@ load = (path) => {
     window.history.pushState(
         "aboutUs",
         "About Us",
-        `${path == "home" ? "index" : path}.php`
+        `index.php?controller=HomeController&action=${path}`
+        // `${path == "home" ? "index" : path}.php`
     );
     // loadingDiv.style.display = "block";
     $("#app").animate({ opacity: 0 }, 400);
     $(".page-title").animate({ color: "transparent" }, 400);
     setTimeout(() => {
-        $("#app").load(`/mvc_webapp/public/content/${path}.php`);
+        // $("#app").load(`/mvc_webapp/public/content/${path}.php`);
+        $("#app").load(`/mvc_webapp/public/index.php?controller=HomeController&action=${path}`);
         changeCSS(path, 5);
         document.title = `${pageTitle[path]} - play im@s`;
 

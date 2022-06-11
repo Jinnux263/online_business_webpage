@@ -2,14 +2,14 @@
 
 // Chứa tất cả các route mà ứng dụng có trong đây
 
-
+// Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.
 $controllers = array(
+  'HomeController' => ['index', 'error', 'about', 'products', 'pricing', 'contact', 'news', 'home'],
   'AuthenticationController' => ['index', 'error', 'login', 'logout', 'register'],
-  'AdminController' => ['index', 'error', ''],
-  'CheckOutController' => ['index', 'error'],
-  'MyAccountController' => ['index', 'error'],
-  'HomeController' => ['index', 'error'],
-); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.
+  'AdminController' => ['index', 'error'],
+  'UserController' => ['index', 'error'],
+); 
+
 
 // Nếu các tham số nhận được từ URL không hợp lệ (không thuộc list controller và action có thể gọi
 // thì trang báo lỗi sẽ được gọi ra.
