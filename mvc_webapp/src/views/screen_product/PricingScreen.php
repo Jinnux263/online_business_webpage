@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/style.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/header.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/pricing.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
     <script defer src="/mvc_webapp/public/js/deps/index.js"></script>
@@ -27,21 +27,59 @@
         <div class="page-title"></div>
         <div id="app">
             <div id="content">
-                <div id="wrapper">
-                    <div class="header">Liên hệ qua Email</div>
-                    <div class="desc">Nếu có vấn đề thắc mắc về dịch vụ của chúng tôi cũng như có vấn đề cần giải quyết, hãy liên hệ với chúng tôi</div>
-                    <div class="inputContainer">
-                        <input type="text" id="name" name="name" placeholder="Họ và tên">
-                        <input type="email" id="email" name="email" placeholder="Email">
-                        <input type="tel" id="tel" name="tel" placeholder="Số điện thoại">
-                        <input type="text" id="title" name="title" placeholder="Tiêu đề">
+                <div id="content">
+                    <div class="plan-container plan-left">
+                        <div class="plan-card">
+                            <div class="plan-title">Plan 1</div>
+                            <div class="plan-desc">
+                                Hỗ trợ điều trị thông qua điện thoại... <br />
+                                <ul>
+                                    <li>Blah</li>
+                                    <li>Blah</li>
+                                    <li>Blah</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-icon">
+                            <img src="https://img.icons8.com/ios-filled/100/000000/cloud.png" />
+                        </div>
                     </div>
-                    <div class="inputContainer">
-                        <textarea id="emailContent" name="emailContent" placeholder="Nội dung"></textarea>
+                    <div class="plan-container plan-right">
+                        <div class="plan-card">
+                            <div class="plan-title">Plan 2</div>
+                            <div class="plan-desc">
+                                Hỗ trợ điều trị thông qua trò chuyện online... <br />
+                                <ul>
+                                    <li>Blah</li>
+                                    <li>Blah</li>
+                                    <li>Blah</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-icon">
+                            <img src="https://img.icons8.com/ios-filled/100/000000/cloud.png" />
+                        </div>
                     </div>
-                    <button id="contactSubmitButton">Liên hệ với chúng tôi</button>
+                    <div class="plan-container plan-left">
+                        <div class="plan-card">
+                            <div class="plan-title">Plan 3</div>
+                            <div class="plan-desc">
+                                Hỗ trợ điều trị trực tiếp... <br />
+                                <ul>
+                                    <li>Blah</li>
+                                    <li>Blah</li>
+                                    <li>Blah</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-icon">
+                            <img src="https://img.icons8.com/ios-filled/100/000000/cloud.png" />
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 

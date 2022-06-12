@@ -21,15 +21,7 @@
 
 <body>
 
-    <div id="headerTab">
-        <div class="btn" onclick="navigate('HomeController','index');">Trang chủ</div>
-        <div class="btn" onclick="navigate('HomeController','about');">Thông tin</div>
-        <div class="btn" onclick="navigate('HomeController','products');">Dịch vụ</div>
-        <div class="btn" onclick="navigate('HomeController','pricing');">Bảng giá</div>
-        <div class="btn" onclick="navigate('HomeController','contact');">Liên hệ</div>
-        <div class="btn" onclick="navigate('HomeController','news');">Tin tức</div>
-        <div class="btn login" onclick="navigate('AuthenticationController','login');">Đăng nhập</div>
-    </div>
+    <?php include APP_ROOT.'/src/views/includes/navbar.php' ?>
 
     <div id="app-container">
         <div class="page-title"></div>
