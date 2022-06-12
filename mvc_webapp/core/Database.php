@@ -2,10 +2,10 @@
 class Database
 {
 	public $conn = NULL;
-	private $server = HOST;
-	private $dbName = DATABASE_NAME;
-	private $user = USER;
-	private $password = PASSWORD;
+	private $server = "localhost";
+	private $dbName = "database_212";
+	private $user = "root";
+	private $password = "";
         
         // Hàm kết nối CSDL
 	public function connect()
