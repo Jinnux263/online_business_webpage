@@ -1,21 +1,21 @@
 <?php
-require_once dirname( __DIR__ ).'/controller/base_controller/BaseController.php';
+require_once dirname( __DIR__ ).'/controllers/base_controller/BaseController.php';
 
 class AuthenticationController extends BaseController
 {
   function __construct()
   {
-    $this->folder = 'pages';
+    $this->folder = 'screen_authentication';
   }
 
   public function index()
   {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
+    include  APP_ROOT."/public/content/login.php";
   }
 
   public function login()
   {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
+    $this->render('LoginScreen');
   }
 
   public function logout()
@@ -25,7 +25,7 @@ class AuthenticationController extends BaseController
 
   public function register()
   {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
+    include  APP_ROOT."/public/content/register.php";
   }
 }
 

@@ -48,12 +48,7 @@ changeCSS = (path, cssLinkIndex) => {
 };
 
 load = (path) => {
-    window.history.pushState(
-        "aboutUs",
-        "About Us",
-        `index.php?controller=HomeController&action=${path}`
-        // `${path == "home" ? "index" : path}.php`
-    );
+
     // loadingDiv.style.display = "block";
     $("#app").animate({ opacity: 0 }, 400);
     $(".page-title").animate({ color: "transparent" }, 400);
@@ -90,3 +85,12 @@ window.addEventListener('popstate', function (event) {
 	// The URL changed...
     console.log('a')
 });
+
+
+
+
+//________________________________________
+
+navigate = (controller ,path) => {
+    location.href=`/mvc_webapp/public/index.php?controller=${controller}&action=${path}`;
+}

@@ -1,11 +1,11 @@
 <?php
-require_once dirname( __DIR__ ).'/controller/base_controller/BaseController.php';
+require_once dirname( __DIR__ ).'/controllers/base_controller/BaseController.php';
 
 class AuthenticationController extends BaseController
 {
   function __construct()
   {
-    $this->folder = 'pages';
+    $this->folder = 'screen_authentication';
   }
 
   public function index()

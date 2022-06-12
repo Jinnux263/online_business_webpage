@@ -26,7 +26,8 @@ class HomeController extends BaseController
 
   public function about()
   {
-     include APP_ROOT."/public/content/about.php";
+    $this->render('AboutScreen');
+    //  include APP_ROOT."/public/content/about.php";
   }
 
   public function products()
@@ -41,12 +42,23 @@ class HomeController extends BaseController
 
   public function contact()
   {
-    include  APP_ROOT."/public/content/contact.php";
+    $this->render('ContactScreen');
+    // include  APP_ROOT."/public/content/contact.php";
   }
 
   public function news()
   {
     include  APP_ROOT."/public/content/news.php";
+  }
+
+  public function login()
+  {
+    include  APP_ROOT."/public/content/login.php";
+  }
+
+  public function register()
+  {
+    include  APP_ROOT."/public/content/register.php";
   }
 
 
