@@ -18,7 +18,7 @@
     <div class="btn" onclick="navigate('PostsController','news');">Tin tức</div>
     <?php
         if (!$loggedStatus)
-            echo "<div class='btn login' onclick='navigate('AuthenticationController','index');'>Đăng nhập</div>";
+            echo "<div class='btn login' onclick=\"navigate('AuthenticationController','index');\">Đăng nhập</div>";
         else {
             echo "
                 <div class='btn loggedIn' onclick='navigate()'>

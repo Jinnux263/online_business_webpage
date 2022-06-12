@@ -24,7 +24,7 @@
     <?php include APP_ROOT.'/src/views/includes/navbar.php' ?>
 
     <div id="app-container">
-        <div class="page-title"></div>
+        <div class="page-title">Đăng ký</div>
         <div id="app">
             <div id="content">
                 <div id="wrapper">
