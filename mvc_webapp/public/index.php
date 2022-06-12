@@ -2,7 +2,7 @@
 session_start();
 
 require_once __DIR__.'/../config/Constants.php';
-require_once APP_ROOT.'/core/Database.php';
+require_once APP_ROOT.'/src/core/Database.php';
 
 // Kiem tra phien coi user co dang nhap
 if (isset($_SESSION['user']) && isset($_SESSION['password'])) {
