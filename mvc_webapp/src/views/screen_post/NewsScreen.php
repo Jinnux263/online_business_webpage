@@ -1,3 +1,24 @@
+<?php
+    // Prototype for a post detail, which includes the title, content and image.
+    class postDetail {
+        public $postTitle;
+        public $postDate;
+        public $postContent;
+        public $postImg;
+    }
+
+    // A list of postDetail given by the database
+    $postList = [];
+
+    // == TEST PURPOSE ==
+    // for ($i = 0; $i < 5; $i++) {
+    //     $postList[$i] = new postDetail();
+    //     $postList[$i]->postTitle = "Thử nghiệm ".$i;
+    //     $postList[$i]->postDate = "Date: ".$i;
+    //     $postList[$i]->postContent = "Đây là thử nghiệm ".$i;
+    //     $postList[$i]->postImg = "https://cdnb.artstation.com/p/assets/images/images/019/036/961/large/minh-hai-do-1551940067489.jpg?1561728310";
+    // }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,52 +45,25 @@
     <?php include APP_ROOT . '/src/views/includes/navbar.php' ?>
 
     <div id="app-container">
-        <div class="page-title"></div>
+        <div class="page-title">Tin tức</div>
         <div id="app">
             <div id="content">
                 <div class="newsContainer">
-                    <div class="news">
-                        <div class="newsPreview"></div>
-                        <div class="newsContent">
-                            <div class="newsHeading">TRUNG TÂM CHUYỂN CƠ SỞ HOẠT ĐỘNG MỚI</div>
-                            <div class="newsDate">Được đăng vào 12/2/2022</div>
-                            <div class="newsDesc">
-                                Trung tâm Tư vấn Sức khỏe Tâm lý 727 chuyển về số 1, đường Phan Văn Trị, phường 12, quận Gò Vấp, TP.HCM. Với cơ sở hoạt động và các trang thiết bị mới, chúng tôi sẵn sàng cung cấp cho các bạn những dịch vụ tốt nhất để đảm bảo an toàn cho sức khỏe của bạn. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo mattis velit, non tempus ligula ultrices sed. Pellentesque rutrum, sem nec lobortis venenatis, lectus mi cursus nisi, in vulputate neque turpis non erat. Nunc et sapien facilisis, pellentesque lorem vitae, vestibulum elit. In ac augue ultrices, porttitor dui at, efficitur est. Fusce nec metus ut mauris sodales malesuada. Mauris viverra ligula nec odio vehicula, pellentesque tristique enim lobortis. Sed quis arcu magna.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="newsPreview"></div>
-                        <div class="newsContent">
-                            <div class="newsHeading">TRUNG TÂM CHUYỂN CƠ SỞ HOẠT ĐỘNG MỚI</div>
-                            <div class="newsDate">Được đăng vào 12/2/2022</div>
-                            <div class="newsDesc">
-                                Trung tâm Tư vấn Sức khỏe Tâm lý 727 chuyển về số 1, đường Phan Văn Trị, phường 12, quận Gò Vấp, TP.HCM. Với cơ sở hoạt động và các trang thiết bị mới, chúng tôi sẵn sàng cung cấp cho các bạn những dịch vụ tốt nhất để đảm bảo an toàn cho sức khỏe của bạn. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo mattis velit, non tempus ligula ultrices sed. Pellentesque rutrum, sem nec lobortis venenatis, lectus mi cursus nisi, in vulputate neque turpis non erat. Nunc et sapien facilisis, pellentesque lorem vitae, vestibulum elit. In ac augue ultrices, porttitor dui at, efficitur est. Fusce nec metus ut mauris sodales malesuada. Mauris viverra ligula nec odio vehicula, pellentesque tristique enim lobortis. Sed quis arcu magna.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="newsPreview"></div>
-                        <div class="newsContent">
-                            <div class="newsHeading">TRUNG TÂM CHUYỂN CƠ SỞ HOẠT ĐỘNG MỚI</div>
-                            <div class="newsDate">Được đăng vào 12/2/2022</div>
-                            <div class="newsDesc">
-                                Trung tâm Tư vấn Sức khỏe Tâm lý 727 chuyển về số 1, đường Phan Văn Trị, phường 12, quận Gò Vấp, TP.HCM. Với cơ sở hoạt động và các trang thiết bị mới, chúng tôi sẵn sàng cung cấp cho các bạn những dịch vụ tốt nhất để đảm bảo an toàn cho sức khỏe của bạn. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo mattis velit, non tempus ligula ultrices sed. Pellentesque rutrum, sem nec lobortis venenatis, lectus mi cursus nisi, in vulputate neque turpis non erat. Nunc et sapien facilisis, pellentesque lorem vitae, vestibulum elit. In ac augue ultrices, porttitor dui at, efficitur est. Fusce nec metus ut mauris sodales malesuada. Mauris viverra ligula nec odio vehicula, pellentesque tristique enim lobortis. Sed quis arcu magna.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news">
-                        <div class="newsPreview"></div>
-                        <div class="newsContent">
-                            <div class="newsHeading">TRUNG TÂM CHUYỂN CƠ SỞ HOẠT ĐỘNG MỚI</div>
-                            <div class="newsDate">Được đăng vào 12/2/2022</div>
-                            <div class="newsDesc">
-                                Trung tâm Tư vấn Sức khỏe Tâm lý 727 chuyển về số 1, đường Phan Văn Trị, phường 12, quận Gò Vấp, TP.HCM. Với cơ sở hoạt động và các trang thiết bị mới, chúng tôi sẵn sàng cung cấp cho các bạn những dịch vụ tốt nhất để đảm bảo an toàn cho sức khỏe của bạn. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo mattis velit, non tempus ligula ultrices sed. Pellentesque rutrum, sem nec lobortis venenatis, lectus mi cursus nisi, in vulputate neque turpis non erat. Nunc et sapien facilisis, pellentesque lorem vitae, vestibulum elit. In ac augue ultrices, porttitor dui at, efficitur est. Fusce nec metus ut mauris sodales malesuada. Mauris viverra ligula nec odio vehicula, pellentesque tristique enim lobortis. Sed quis arcu magna.
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        foreach ($postList as $idx=>$e) {
+                            echo "
+                            <div class='news'>
+                                <div class='newsPreview' style='background: url(".$e->postImg.") center center/cover'></div>
+                                <div class='newsContent'>
+                                    <div class='newsHeading'>".$e->postTitle."</div>
+                                    <div class='newsDate'>".$e->postDate."</div>
+                                    <div class='newsDesc'>".$e->postContent."</div>
+                                </div>
+                            </div>";
+                        }
+                    ?>
                 </div>
-                <div class="newsNavigator">
+                <!-- <div class="newsNavigator">
                     <div class="newsFilter">Tháng 6/2022</div>
                     <div class="newsFilter">Tháng 5/2022</div>
                     <div class="newsFilter">Tháng 4/2022</div>
@@ -78,14 +72,14 @@
                     <div class="newsFilter">Tháng 1/2022</div>
                     <div class="newsFilter">Tháng 12/2021</div>
                     <div class="newsFilter">Tháng 11/2021</div>
-                </div>
-                <div class="newsPage">
+                </div> -->
+                <!-- <div class="newsPage">
                     <div class="newsPrev">&#60;</div>
                     <div class="newsPageIterator currentPage">1</div>
                     <div class="newsPageIterator">2</div>
                     <div class="newsPageIterator">3</div>
                     <div class="newsForw">&#62;</div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

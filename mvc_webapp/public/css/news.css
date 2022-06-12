@@ -38,10 +38,6 @@
 .newsPreview {
     width: 200px;
     aspect-ratio: 1 / 1;
-
-    /* background: black; */
-    background: url("../static/bg.jpg");
-    background-size: cover;
     
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
