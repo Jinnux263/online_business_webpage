@@ -5,27 +5,17 @@ class UserController extends BaseController
 {
   function __construct()
   {
-    $this->folder = 'screen_authentication';
+    $this->folder = 'screen_user';
   }
 
   public function index()
   {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
+    $this->render('UserScreen');
   }
 
-  public function login()
+  public function account()
   {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
-  }
-
-  public function logout()
-  {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
-  }
-
-  public function register()
-  {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
+    $this->render('UserScreen');
   }
 
 }

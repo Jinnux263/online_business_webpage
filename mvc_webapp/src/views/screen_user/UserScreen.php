@@ -35,15 +35,15 @@
         <div class="page-title"></div>
         <div id="app">
             <div id="content">
-                <div id="wrapper">
-                    <div class="header">Đăng nhập</div>
-                    <div class="desc">Nếu có chưa có tài khoản, hãy <span class="quickNav" onclick="load('register')">đăng ký</span> tại đây</div>
-                    <div class="inputContainer">
-                        <input type="text" id="name" name="name" placeholder="Tên đăng nhập">
-                        <input type="password" id="pwd" name="pwd" placeholder="Mật khẩu">
-                    </div>
-                    <button id="loginButton">Đăng nhập</button>
+                <script src="deps/account.js"></script>
+                <div class="navigation">
+                    <div class="option" onclick="settingsLoad('general')">Thông tin chung</div>
+                    <div class="option" onclick="settingsLoad('bills')">Dịch vụ đã đặt</div>
+                    <div class="option" onclick="settingsLoad('services')">Quản lý dịch vụ</div>
+                    <div class="option" onclick="settingsLoad('billsManagement')">Quản lý đơn đặt</div>
+                    <div class="option" onclick="settingsLoad('newsManagement')">Quản lý bài viết</div>
                 </div>
+                <div class="settingsContent"></div>
             </div>
         </div>
     </div>
