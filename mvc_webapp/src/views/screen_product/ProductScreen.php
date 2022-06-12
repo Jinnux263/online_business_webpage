@@ -1,20 +1,44 @@
 <?php
     // Prototype for a services detail, which includes the header, description and image.
-    class servicesDetail {
-        public $servicesHeader;
-        public $servicesDesc;
-        public $servicesImg;
+    class docDetail {
+        public $docName;
+        public $docDesc;
+        public $docImg;
     }
 
     // A list of servicesDetail given by the database
-    $servicesList = [];
+    $docList = [];
 
     // == TEST PURPOSE ==
-    for ($i = 0; $i < 5; $i++) {
-        $servicesList[$i] = new servicesDetail();
-        $servicesList[$i]->servicesHeader = "Vietnam Community League";
-        $servicesList[$i]->servicesDesc = "Vietnam Community League (VCL) là hệ thống giải osu! chuyên nghiệp đầu tiên tại Việt Nam. Với lịch trình hoạt động xuyên suốt trong năm nhờ các giải đa dạng về thể thức và lực lượng hỗ trợ chuyên nghiệp, Vietnam Community League hướng tới mục tiêu đem lại trải nghiệm tốt nhất dành cho các người chơi cũng như người theo dõi.";
-        $servicesList[$i]->servicesImg = "./static/bg.jpg";
+    $nameList = [
+        "Bác sĩ Albert Steins",
+        "Bác sĩ Fumihiko Yotsuki",
+        "Bác sĩ Nguyễn Quốc Kiên",
+        "Bác sĩ Hoàng Vân Khánh"
+
+    ];
+
+    $descList = [
+        "Chuyên gia điều trị đến từ nước Đức. Thâm niên 20 năm trong ngành điều trị tâm lý.",
+        "Chuyên gia tâm lý Nhật Bản với 23 năm có kinh nghiệm trong việc điều trị tâm lý.",
+        "Chuyên gia tâm lý đến từ Đại học Y Thành phố Hồ Chí Minh.",
+        "Chuyên gia tâm lý với 30 năm kinh nghiệm trong ngành. Từng làm việc tại các nước phát triển."
+
+    ];
+    
+    $imgList = [
+        "https://img.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg?w=2000",
+        "https://img.freepik.com/free-photo/portrait-beautiful-japanese-woman-doctor-white_251136-79512.jpg?w=2000",
+        "https://vietnamtimes.org.vn/stores/news_dataimages/trangnguyenvnt/112021/07/14/5737_4.jpg?rt=20211107145741",
+        "https://img.freepik.com/free-photo/confident-doctor-looking-camera-holding-tablet-pc_1098-18880.jpg?w=2000"
+
+    ];
+
+    for ($i = 0; $i < 3; $i++) {
+        $docList[$i] = new docDetail();
+        $docList[$i]->docName = $nameList[$i];
+        $docList[$i]->docDesc = $descList[$i];
+        $docList[$i]->docImg = $imgList[$i];
     }
 ?>
 <!DOCTYPE html>
@@ -43,16 +67,16 @@
     <?php include APP_ROOT.'/src/views/includes/navbar.php' ?>
 
     <div id="app-container">
-        <div class="page-title">Giới thiệu dịch vụ</div>
+        <div class="page-title">Giới thiệu các bác sĩ nổi bật</div>
         <div id="app">
             <div id="content">
                 <div class="main-gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
                     <?php
-                        foreach ($servicesList as $idx=>$e) {
+                        foreach ($docList as $idx=>$e) {
                             echo "
-                            <div class='gallery-cell' style='background: linear-gradient(0deg, rgba(0 0 0 / 1) 0%, rgba(0 0 0 / 0) 100%), url(".$e->servicesImg.")'>
-                                <div class='card-title'>".$e->servicesHeader."</div>
-                                <div class='card-subText'>".$e->servicesDesc."</div>
+                            <div class='gallery-cell' style='background: linear-gradient(0deg, rgba(0 0 0 / 1) 0%, rgba(0 0 0 / 0) 100%), url(".$e->docImg.")'>
+                                <div class='card-title'>".$e->docName."</div>
+                                <div class='card-subText'>".$e->docDesc."</div>
                             </div>"; 
                         }
                     ?>

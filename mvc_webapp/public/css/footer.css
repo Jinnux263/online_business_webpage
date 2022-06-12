@@ -28,7 +28,7 @@
     width: 20%;
 }
 
-#socialMediaContainer > img {
+#socialMediaContainer img {
     filter: invert(1);
     margin: 5px;
 }

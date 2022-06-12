@@ -32,11 +32,11 @@
                     HÃY LIÊN HỆ VỚI CHÚNG TÔI
                 </div>
                 <div id="subText">
-                    Hãy trải nghiệm dịch vụ tư vấn tâm lý của chúng tôi từ hôm nay. <br>
+                    Trung tâm Tư vấn Tâm lý Mental First sẵn sàng hỗ trợ bạn trong cuộc sống. <br>
                     Bắt đầu chỉ với việc nhập email của bạn!
                 </div>
                 <input type="text" id="emailInput" placeholder="Email">
-                <button id="submitButton">Submit</button>
+                <button id="submitButton">Gửi</button>
             </div>
         </div>
     </div>
