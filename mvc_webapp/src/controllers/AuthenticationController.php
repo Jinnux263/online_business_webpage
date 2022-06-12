@@ -10,17 +10,32 @@ class AuthenticationController extends BaseController
 
   public function index()
   {
-    include  APP_ROOT."/public/content/login.php";
+    $this->render('LoginScreen');
   }
 
   public function login()
   {
-    $this->render('LoginScreen');
+    $username = $_POST['user'];
+    $password = $_POST['password'];
+
+    // Check  the username, return result
+    $result = true;
+
+    if ($result) {
+      $_SESSION['user'] = $username;
+      $_SESSION['password'] = $password;
+
+      header('Location:/mvc_webapp/public/index.php');
+    }
   }
 
   public function logout()
   {
-    include dirname( __DIR__ ).'/view/screen_homepage/MainScreen.php';
+    if (isset($_SESSION['user'])) {
+      unset($_SESSION['user']);
+      unset($_SESSION['password']);
+    }
+    header('Location:/mvc_webapp/public/index.php');
   }
 
   public function register()

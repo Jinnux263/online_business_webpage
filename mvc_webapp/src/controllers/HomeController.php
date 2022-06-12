@@ -14,8 +14,8 @@ class HomeController extends BaseController
 
   public function index()
   {
-    $data = array('brands' => $this->DBcon->query("SELECT * FROM brands"));
-    $this->render('MainScreen', $data);
+    // $data = array('brands' => $this->DBcon->query("SELECT * FROM brands"));
+    $this->render('MainScreen');
     // include dirname( __DIR__ ).'/views/screen_homepage/MainScreen.php';
   }
 
