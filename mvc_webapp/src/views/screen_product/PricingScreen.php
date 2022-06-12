@@ -1,3 +1,24 @@
+<?php
+    // Prototype for a product detail, which includes doctor's name, description, price and image.
+    class productsDetail {
+        public $productsDoc;
+        public $productsDesc;
+        public $productsPrice;
+        public $productsImg;
+    }
+
+    // A list of productsDetail given by the database
+    $productsList = [];
+
+    // == TEST PURPOSE ==
+    // for ($i = 0; $i < 5; $i++) {
+    //     $productsList[$i] = new productsDetail();
+    //     $productsList[$i]->productsDoc = "Thử nghiệm ".$i;
+    //     $productsList[$i]->productsDesc = "Đây là thử nghiệm ".$i;
+    //     $productsList[$i]->productsPrice = "727.000VNĐ";
+    //     $productsList[$i]->productsImg = "https://www.stockvault.net/data/2015/09/01/177580/preview16.jpg";
+    // }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,59 +48,26 @@
         <div class="page-title"></div>
         <div id="app">
             <div id="content">
-                <div id="content">
-                    <div class="plan-container plan-left">
-                        <div class="plan-card">
-                            <div class="plan-title">Plan 1</div>
-                            <div class="plan-desc">
-                                Hỗ trợ điều trị thông qua điện thoại... <br />
-                                <ul>
-                                    <li>Blah</li>
-                                    <li>Blah</li>
-                                    <li>Blah</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="plan-icon">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/cloud.png" />
-                        </div>
-                    </div>
-                    <div class="plan-container plan-right">
-                        <div class="plan-card">
-                            <div class="plan-title">Plan 2</div>
-                            <div class="plan-desc">
-                                Hỗ trợ điều trị thông qua trò chuyện online... <br />
-                                <ul>
-                                    <li>Blah</li>
-                                    <li>Blah</li>
-                                    <li>Blah</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="plan-icon">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/cloud.png" />
-                        </div>
-                    </div>
-                    <div class="plan-container plan-left">
-                        <div class="plan-card">
-                            <div class="plan-title">Plan 3</div>
-                            <div class="plan-desc">
-                                Hỗ trợ điều trị trực tiếp... <br />
-                                <ul>
-                                    <li>Blah</li>
-                                    <li>Blah</li>
-                                    <li>Blah</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="plan-icon">
-                            <img src="https://img.icons8.com/ios-filled/100/000000/cloud.png" />
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    foreach ($productsList as $idx=>$e) {
+                        $pos = "left";
+                        if ($idx % 2 != 0)
+                            $pos = "right";
 
+                        echo "
+                        <div class='plan-container plan-".$pos."'>
+                            <div class='plan-card'>
+                                <div class='plan-title'>".$e->productsDoc."</div>
+                                <div class='plan-desc'>".$e->productsDesc."</div>
+                                <div class='plan-price'>".$e->productsPrice."</div>
+                            </div>
+                            <div class='plan-icon'>
+                                <img src='".$e->productsImg."' />
+                            </div>
+                        </div>";
+                    }
+                ?>
             </div>
-
         </div>
     </div>
 
