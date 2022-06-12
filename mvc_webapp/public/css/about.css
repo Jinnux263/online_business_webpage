@@ -44,7 +44,7 @@
 .left {
     /* justify-content: flex-start; */
     text-align: left;
-    background: linear-gradient(90deg, rgb(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 70%), url('https://cdnb.artstation.com/p/assets/images/images/019/036/961/large/minh-hai-do-1551940067489.jpg?1561728310');
+    background: linear-gradient(270deg, rgb(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 70%), url(https://cdnb.artstation.com/p/assets/images/images/019/036/961/large/minh-hai-do-1551940067489.jpg?1561728310);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: 500px 0; */

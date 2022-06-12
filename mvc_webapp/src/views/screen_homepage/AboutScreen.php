@@ -1,3 +1,22 @@
+<?php
+    // Prototype for a about detail, which includes the header and description.
+    class aboutDetail {
+        public $aboutHeader;
+        public $aboutDesc;
+        public $aboutImg;
+    }
+
+    // A list of aboutDetail given by the database
+    $aboutList = [];
+
+    // == TEST PURPOSE ==
+    // for ($i = 0; $i < 5; $i++) {
+    //     $aboutList[$i] = new aboutDetail();
+    //     $aboutList[$i]->aboutHeader = "Thử nghiệm ".$i;
+    //     $aboutList[$i]->aboutDesc = "Đây là description thử nghiệm ".$i;
+    //     $aboutList[$i]->aboutImg = "./static/bg.jpg";
+    // }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,43 +43,25 @@
     <?php include APP_ROOT.'/src/views/includes/navbar.php' ?>
 
     <div id="app-container">
-        <div class="page-title"></div>
+        <div class="page-title">Thông tin</div>
         <div id="app">
             <div id="content">
-                <div class="infoTab right">
-                    <div class="tabTitle">ĐỘI NGŨ TẬN TÂM</div>
-                    <div class="tabContent">
-                        DO YOU HAVE the knight jumping high at the Oni slayer?<br>
-                        I AM um... JAPANESE GOBLIN. <br>
-                        Red, Blue, Yellow Onis AND MORE! <br>
-                        HIGH VIVID CHARTREUSE-GREEN Oni. <br>
-                        SEXY MEDIUM VIOLET Oni. <br>
-                        Purple blooming Rhododendron Oni. <br>
-                        Lalala I wonder can we cause a pandaemonium TONIGHT?</div>
-                </div>
-                <div class="infoTab left">
-                    <div class="tabTitle">ĐỘI NGŨ TẬN TÂM</div>
-                    <div class="tabContent">
-                        HIGH TENSION JAPANESE GOBLIN. <br>
-                        DRUNK, HAPPY, slowly getting tipsy. <br>
-                        I AM um... JAPANESE GOBLIN. <br>
-                        LET'S GO moon viewing, sing, and make a fuss! <br>
-                        Wrap ourselves with wrapping paper or something SHALL WE? <br>
-                        Even humans or ghosts, I'll make them see stars. <br>
-                        It's not that bad, It's not that bad. <br>
-                        BREAK OUT and let's party!</div>
-                </div>
-                <div class="infoTab right">
-                    <div class="tabTitle">ĐỘI NGŨ TẬN TÂM</div>
-                    <div class="tabContent">
-                        DO YOU HAVE the knight jumping high at the Oni slayer?<br>
-                        I AM um... JAPANESE GOBLIN. <br>
-                        Red, Blue, Yellow Onis AND MORE! <br>
-                        HIGH VIVID CHARTREUSE-GREEN Oni. <br>
-                        SEXY MEDIUM VIOLET Oni. <br>
-                        Purple blooming Rhododendron Oni. <br>
-                        Lalala I wonder can we cause a pandaemonium TONIGHT?</div>
-                </div>
+            <?php
+                    foreach ($aboutList as $idx=>$e) {
+                        $pos = "right";
+                        $deg = "90";
+                        if ($idx % 2 != 0){
+                            $pos = "left";
+                            $deg = "270";
+                        }
+
+                        echo "
+                        <div class='infoTab ".$pos."' style='background: linear-gradient(".$deg."deg, rgb(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 50%), url(".$e->aboutImg.")'>
+                            <div class='tabTitle'>".$e->aboutHeader."</div>
+                            <div class='tabContent'>".$e->aboutDesc."</div>
+                        </div>";
+                    }
+                ?>
             </div>
         </div>
     </div>

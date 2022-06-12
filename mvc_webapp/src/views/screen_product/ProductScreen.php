@@ -24,7 +24,7 @@
     <?php include APP_ROOT.'/src/views/includes/navbar.php' ?>
 
     <div id="app-container">
-        <div class="page-title"></div>
+        <div class="page-title">Giới thiệu dịch vụ</div>
         <div id="app">
             <div id="content">
                 <div class="main-gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>

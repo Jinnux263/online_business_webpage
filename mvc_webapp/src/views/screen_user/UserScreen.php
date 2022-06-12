@@ -32,7 +32,7 @@
     </div>
 
     <div id="app-container">
-        <div class="page-title"></div>
+        <div class="page-title">Tài khoản</div>
         <div id="app">
             <div id="content">
                 <script src="deps/account.js"></script>
