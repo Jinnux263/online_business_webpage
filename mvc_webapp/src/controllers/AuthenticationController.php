@@ -40,7 +40,7 @@ class AuthenticationController extends BaseController
 
   public function register()
   {
-    include  APP_ROOT."/public/content/register.php";
+    $this->render('RegisterScreen');
   }
 }
 

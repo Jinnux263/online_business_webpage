@@ -10,12 +10,12 @@
     $servicesList = [];
 
     // == TEST PURPOSE ==
-    // for ($i = 0; $i < 5; $i++) {
-    //     $servicesList[$i] = new servicesDetail();
-    //     $servicesList[$i]->servicesHeader = "Vietnam Community League";
-    //     $servicesList[$i]->servicesDesc = "Vietnam Community League (VCL) là hệ thống giải osu! chuyên nghiệp đầu tiên tại Việt Nam. Với lịch trình hoạt động xuyên suốt trong năm nhờ các giải đa dạng về thể thức và lực lượng hỗ trợ chuyên nghiệp, Vietnam Community League hướng tới mục tiêu đem lại trải nghiệm tốt nhất dành cho các người chơi cũng như người theo dõi.";
-    //     $servicesList[$i]->servicesImg = "./static/bg.jpg";
-    // }
+    for ($i = 0; $i < 5; $i++) {
+        $servicesList[$i] = new servicesDetail();
+        $servicesList[$i]->servicesHeader = "Vietnam Community League";
+        $servicesList[$i]->servicesDesc = "Vietnam Community League (VCL) là hệ thống giải osu! chuyên nghiệp đầu tiên tại Việt Nam. Với lịch trình hoạt động xuyên suốt trong năm nhờ các giải đa dạng về thể thức và lực lượng hỗ trợ chuyên nghiệp, Vietnam Community League hướng tới mục tiêu đem lại trải nghiệm tốt nhất dành cho các người chơi cũng như người theo dõi.";
+        $servicesList[$i]->servicesImg = "./static/bg.jpg";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

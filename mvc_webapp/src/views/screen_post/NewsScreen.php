@@ -11,13 +11,13 @@
     $postList = [];
 
     // == TEST PURPOSE ==
-    // for ($i = 0; $i < 5; $i++) {
-    //     $postList[$i] = new postDetail();
-    //     $postList[$i]->postTitle = "Thử nghiệm ".$i;
-    //     $postList[$i]->postDate = "Date: ".$i;
-    //     $postList[$i]->postContent = "Đây là thử nghiệm ".$i;
-    //     $postList[$i]->postImg = "https://cdnb.artstation.com/p/assets/images/images/019/036/961/large/minh-hai-do-1551940067489.jpg?1561728310";
-    // }
+    for ($i = 0; $i < 5; $i++) {
+        $postList[$i] = new postDetail();
+        $postList[$i]->postTitle = "Thử nghiệm ".$i;
+        $postList[$i]->postDate = "Date: ".$i;
+        $postList[$i]->postContent = "Đây là thử nghiệm ".$i;
+        $postList[$i]->postImg = "https://cdnb.artstation.com/p/assets/images/images/019/036/961/large/minh-hai-do-1551940067489.jpg?1561728310";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

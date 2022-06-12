@@ -11,13 +11,13 @@
     $productsList = [];
 
     // == TEST PURPOSE ==
-    // for ($i = 0; $i < 5; $i++) {
-    //     $productsList[$i] = new productsDetail();
-    //     $productsList[$i]->productsDoc = "Thử nghiệm ".$i;
-    //     $productsList[$i]->productsDesc = "Đây là thử nghiệm ".$i;
-    //     $productsList[$i]->productsPrice = "727.000VNĐ";
-    //     $productsList[$i]->productsImg = "https://www.stockvault.net/data/2015/09/01/177580/preview16.jpg";
-    // }
+    for ($i = 0; $i < 5; $i++) {
+        $productsList[$i] = new productsDetail();
+        $productsList[$i]->productsDoc = "Thử nghiệm ".$i;
+        $productsList[$i]->productsDesc = "Đây là thử nghiệm ".$i;
+        $productsList[$i]->productsPrice = "727.000VNĐ";
+        $productsList[$i]->productsImg = "https://www.stockvault.net/data/2015/09/01/177580/preview16.jpg";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

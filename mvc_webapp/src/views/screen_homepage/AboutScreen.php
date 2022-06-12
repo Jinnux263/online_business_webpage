@@ -10,12 +10,12 @@
     $aboutList = [];
 
     // == TEST PURPOSE ==
-    // for ($i = 0; $i < 5; $i++) {
-    //     $aboutList[$i] = new aboutDetail();
-    //     $aboutList[$i]->aboutHeader = "Thử nghiệm ".$i;
-    //     $aboutList[$i]->aboutDesc = "Đây là description thử nghiệm ".$i;
-    //     $aboutList[$i]->aboutImg = "./static/bg.jpg";
-    // }
+    for ($i = 0; $i < 5; $i++) {
+        $aboutList[$i] = new aboutDetail();
+        $aboutList[$i]->aboutHeader = "Thử nghiệm ".$i;
+        $aboutList[$i]->aboutDesc = "Đây là description thử nghiệm ".$i;
+        $aboutList[$i]->aboutImg = "./static/bg.jpg";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
