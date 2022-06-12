@@ -1,4 +1,4 @@
-    <div id="footerTab">
+<div id="footerTab">
         <div id="address">
             <div class="title">Địa chỉ</div>
             <div id="addressContainer">
@@ -11,10 +11,10 @@
         <div id="socialMedia">
             <div class="title">Social Media</div>
             <div id="socialMediaContainer">
-                <img src="https://img.icons8.com/material-outlined/48/000000/facebook-new.png"/>
-                <img src="https://img.icons8.com/material-outlined/48/000000/youtube-play--v1.png"/>
-                <img src="https://img.icons8.com/material-outlined/48/000000/instagram-new--v1.png"/>
-                <img src="https://img.icons8.com/material-outlined/48/000000/twitter.png"/>
+                <img src="https://img.icons8.com/material-outlined/48/000000/facebook-new.png" />
+                <img src="https://img.icons8.com/material-outlined/48/000000/youtube-play--v1.png" />
+                <img src="https://img.icons8.com/material-outlined/48/000000/instagram-new--v1.png" />
+                <img src="https://img.icons8.com/material-outlined/48/000000/twitter.png" />
             </div>
         </div>
         <div id="contact">
