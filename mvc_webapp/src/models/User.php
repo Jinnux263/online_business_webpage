@@ -1,5 +1,5 @@
 <?php
-
+require_once APP_ROOT . '/src/models/ModelHelper.php';
 class UserModel {
 
     public $usernames;
@@ -14,6 +14,8 @@ class UserModel {
     function __construct($usernames, $password){
         $this->usernames = $usernames;
         $this->password = $password;
+        $this->type= "admin";
+        // Khoi tao cac truong con lai
     }
 
     // function check() {
