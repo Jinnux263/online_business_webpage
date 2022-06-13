@@ -36,7 +36,7 @@
                     Bắt đầu một cuộc hẹn ngay!
                 </div>
                 <!-- <input type="text" id="emailInput" placeholder="Email"> -->
-                <button id="submitButton" onclick="navigate('ProductDetailController','products');">Đặt lịch ngay</button>
+                <button id="submitButton" onclick="navigate('ProductDetailController','order');">Đặt lịch ngay</button>
             </div>
         </div>
     </div>
