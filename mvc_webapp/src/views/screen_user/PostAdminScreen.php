@@ -2,28 +2,38 @@
     // Variable for account type
     $accountType = "admin";
 
-    // Prototype for user data
-    class userDetail
-    {
-        public $userName;
-        public $realName;
-        public $email;
-        public $tel;
+    // A prototype for news preview, which includes the title and the preview image
+    class newsPreview {
+        public $newsTitle;
+        public $newsImg;
 
-        public function __construct($uName, $rName, $email, $tel)
+        public function __construct($title, $img)
         {
-            $this->userName = $uName;
-            $this->realName = $rName;
-            $this->email = $email;
-            $this->tel = $tel;
+            $this->newsTitle = $title;
+            $this->newsImg = $img;
         }
     }
 
-    // User data taken from database
-    // $userData = null;
+    // A list of news taken from database
+    $newsList = [];
 
     // == TEST PURPOSE ==
-    $userData = new userDetail("Try-Z", "Lô Hoàng Khôi Nguyên", "tryz@vcl.works", "0727 727 727");
+    $titleList = [
+        "Điều trị tâm lý cho trẻ vị thành niên - Bài toàn mới trong ngành tâm lý?",
+        "Hikikomori là gì và tác động của nó đến giới trẻ Nhật Bản",
+        "Trầm cảm và những biểu hiện ban đầu",
+        "Trầm cảm và những biểu hiện ban đầu"
+    ];
+
+    $imgList = [
+        "https://ounews.co/wp-content/uploads/2018/03/shutterstock_174741554-e1519911636917.jpg",
+        "https://kenh14cdn.com/thumb_w/650/2016/hikiko-1471883423991.jpg",
+        "https://vinmec-prod.s3.amazonaws.com/images/20210320_072716_425735_tram-cam.max-1800x1800.jpg",
+        "https://vinmec-prod.s3.amazonaws.com/images/20210320_072716_425735_tram-cam.max-1800x1800.jpg"
+    ];
+
+    for ($i = 0; $i < 4; $i++)
+        $newsList[$i] = new newsPreview($titleList[$i], $imgList[$i]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +51,7 @@
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/header.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account.css">
-    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/general.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/newsManagement.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
     <script defer src="/mvc_webapp/public/js/deps/index.js"></script>
@@ -71,38 +81,21 @@
                 </div>
                 <div class="settingsContent">
                     <div class="headingSection">
-                        <div class="settingsHeading">Thông tin tài khoản</div>
-                        <div class="settingsDesc">Chỉnh sửa thông tin tài khoản của bạn</div>
+                        <div class="settingsHeading">Quản lý bài viết</div>
+                        <div class="settingsDesc">Xem và chỉnh sửa bài viết trên Tin tức</div>
                     </div>
                     <div class="innerSection">
-                        <div class="optionRow">
-                            <div class="label">Tên đăng nhập</div>
-                            <div class="optionContent"><?php echo $userData->userName; ?></div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Tên khách hàng</div>
-                            <div class="optionContent">
-                                <input type="text" id="realName" name="realName" value="<?php echo $userData->realName ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Email</div>
-                            <div class="optionContent">
-                                <input type="email" id="email" name="email" value="<?php echo $userData->email ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Số điện thoại</div>
-                            <div class="optionContent">
-                                <input type="tel" id="tel" name="tel" value="<?php echo $userData->tel ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label"></div>
-                            <div class="optionContent">
-                                <div class="confirmButton">Lưu</div>
-                            </div>
-                        </div>
+                        <?php
+                            foreach ($newsList as $e) {
+                                echo "
+                                    <div class='newsContainer'>
+                                        <div class='newsPreview' style='background: url(" . $e->newsImg . ") center center/cover'></div>
+                                        <div class='newsTitle'>" . $e->newsTitle . "</div>
+                                        <div class='remover' onclick='removeBox(this)'>-</div>
+                                    </div>";
+                            }
+                        ?>
+                        <div class="addNews" onclick="load('post')">+</div>
                     </div>
                 </div>
             </div>

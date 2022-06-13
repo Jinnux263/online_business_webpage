@@ -103,3 +103,55 @@ logout = () => {
 
     navigate("HomeController", "index");
 }
+
+removeBox = (e) => {
+    e.parentNode.remove();
+}
+
+createInput = (id, className, val) => {
+    let tmp = document.createElement("input");
+    tmp.setAttribute("id", id);
+    tmp.setAttribute("class", className);
+    tmp.setAttribute("value", val);
+
+    return tmp;
+}
+
+createLabel = (text, idx) => {
+    let tmp = document.createElement("label");
+    tmp.setAttribute("for", "label");
+    tmp.innerText = text;
+
+    return tmp;
+}
+
+addServicesBox = () => {
+    let idx = document.querySelectorAll("[id*=servicesName]").length + 1;
+    let box = document.createElement("div");
+    box.setAttribute("class", "servicesBox");
+
+    let sId = createInput(`servicesId-${idx}`, "servicesInput", ``);
+    let sName = createInput(`servicesName-${idx}`, "servicesInput", ``);
+    let sDoc = createInput(`servicesDesc-${idx}`, "servicesInput", ``);
+    let sLength = createInput(`servicesPrice-${idx}`, "servicesInput", ``);
+
+    let labelId = createLabel("Id dịch vụ", idx - 1);
+    let labelName = createLabel("Tên dịch vụ", idx - 1);
+    let labelDoc = createLabel("Mô tả dịch vụ", idx - 1);
+    let labelLength = createLabel("Giá", idx - 1);
+
+    let save = document.createElement("div");
+    save.setAttribute("id", `saveButton-${idx - 1}`);
+    save.setAttribute("class", "saveButton");
+    save.setAttribute("onclick", "saveService()");
+    save.innerText = "Lưu";
+
+    let remover = document.createElement("div");
+    remover.setAttribute("class", "remover");
+    remover.setAttribute("onclick", "removeBox(this)");
+    remover.innerText = '-';
+
+    box.append(labelId, sId, labelName, sName, labelDoc, sDoc, labelLength, sLength, save, remover);
+
+    document.getElementsByClassName("innerSection")[0].insertBefore(box, document.getElementsByClassName("addBox")[0]);
+}

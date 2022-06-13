@@ -2,28 +2,26 @@
     // Variable for account type
     $accountType = "admin";
 
-    // Prototype for user data
-    class userDetail
-    {
-        public $userName;
-        public $realName;
-        public $email;
-        public $tel;
+    // A prototype for a bill detail, which includes the service name, bill Id and date
+    class billDetail {
+        public $servicesName;
+        public $billId;
+        public $billDate;
 
-        public function __construct($uName, $rName, $email, $tel)
+        public function __construct($name, $id, $date)
         {
-            $this->userName = $uName;
-            $this->realName = $rName;
-            $this->email = $email;
-            $this->tel = $tel;
+            $this->servicesName = $name;
+            $this->billId = $id;
+            $this->billDate = $date;
         }
     }
 
-    // User data taken from database
-    // $userData = null;
+    // List of bills taken from database
+    $billList = [];
 
     // == TEST PURPOSE ==
-    $userData = new userDetail("Try-Z", "Lô Hoàng Khôi Nguyên", "tryz@vcl.works", "0727 727 727");
+    for ($i = 0; $i < 5; $i++)
+        $billList[$i] = new billDetail("Dịch vụ tư vấn tâm lý trực tiếp", "#009849", "12/2/2022");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +39,7 @@
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/header.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account.css">
-    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/general.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/bills.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
     <script defer src="/mvc_webapp/public/js/deps/index.js"></script>
@@ -71,38 +69,20 @@
                 </div>
                 <div class="settingsContent">
                     <div class="headingSection">
-                        <div class="settingsHeading">Thông tin tài khoản</div>
-                        <div class="settingsDesc">Chỉnh sửa thông tin tài khoản của bạn</div>
+                        <div class="settingsHeading">Dịch vụ đã sử dụng</div>
+                        <div class="settingsDesc">Xem lại lịch sử sử dụng dịch vụ</div>
                     </div>
                     <div class="innerSection">
-                        <div class="optionRow">
-                            <div class="label">Tên đăng nhập</div>
-                            <div class="optionContent"><?php echo $userData->userName; ?></div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Tên khách hàng</div>
-                            <div class="optionContent">
-                                <input type="text" id="realName" name="realName" value="<?php echo $userData->realName ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Email</div>
-                            <div class="optionContent">
-                                <input type="email" id="email" name="email" value="<?php echo $userData->email ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Số điện thoại</div>
-                            <div class="optionContent">
-                                <input type="tel" id="tel" name="tel" value="<?php echo $userData->tel ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label"></div>
-                            <div class="optionContent">
-                                <div class="confirmButton">Lưu</div>
-                            </div>
-                        </div>
+                        <?php
+                            foreach ($billList as $e) {
+                                echo "
+                                    <div class='billRow'>
+                                        <div class='billName'>" . $e->servicesName . "</div>
+                                        <div class='billId'>" . $e->billId . "</div>
+                                        <div class='billDate'>" . $e->billDate . "</div>
+                                    </div>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

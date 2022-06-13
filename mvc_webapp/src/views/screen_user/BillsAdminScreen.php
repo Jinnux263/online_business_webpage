@@ -2,28 +2,41 @@
     // Variable for account type
     $accountType = "admin";
 
-    // Prototype for user data
-    class userDetail
-    {
-        public $userName;
-        public $realName;
-        public $email;
-        public $tel;
+    // A prototype for a bill detail, which includes the service name, bill Id and date
+    class customerDetail {
+        public $customerName;
+        public $customerEmail;
+        public $customerTel;
 
-        public function __construct($uName, $rName, $email, $tel)
+        public function __construct($name, $email, $tel)
         {
-            $this->userName = $uName;
-            $this->realName = $rName;
-            $this->email = $email;
-            $this->tel = $tel;
+            $this->customerName = $name;
+            $this->customerEmail = $email;
+            $this->custerTel = $tel;
         }
     }
 
-    // User data taken from database
-    // $userData = null;
+    class billAdminDetail {
+        public $servicesName;
+        public $billId;
+        public $billDate;
+        public $customerInfo;
+
+        public function __construct($sName, $id, $date, $cName, $email, $tel)
+        {
+            $this->servicesName = $sName;
+            $this->billId = $id;
+            $this->billDate = $date;
+            $this->customerInfo = new customerDetail($cName, $email, $tel);
+        }
+    }
+
+    // List of bills taken from database
+    $billAdminList = [];
 
     // == TEST PURPOSE ==
-    $userData = new userDetail("Try-Z", "Lô Hoàng Khôi Nguyên", "tryz@vcl.works", "0727 727 727");
+    for ($i = 0; $i < 5; $i++)
+    $billAdminList[$i] = new billAdminDetail("Dịch vụ tư vấn tâm lý trực tiếp", "#009849", "12/2/2022", "Lê Van Dovious Panda", "dvs_pd@ppy.sh", "0727 727 727");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +54,7 @@
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/header.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account.css">
-    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/general.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/billsManagement.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
     <script defer src="/mvc_webapp/public/js/deps/index.js"></script>
@@ -71,38 +84,28 @@
                 </div>
                 <div class="settingsContent">
                     <div class="headingSection">
-                        <div class="settingsHeading">Thông tin tài khoản</div>
-                        <div class="settingsDesc">Chỉnh sửa thông tin tài khoản của bạn</div>
+                        <div class="settingsHeading">Quản lý đơn đặt dịch vụ</div>
+                        <div class="settingsDesc">Xem và xóa đơn đặt dịch vụ</div>
                     </div>
                     <div class="innerSection">
-                        <div class="optionRow">
-                            <div class="label">Tên đăng nhập</div>
-                            <div class="optionContent"><?php echo $userData->userName; ?></div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Tên khách hàng</div>
-                            <div class="optionContent">
-                                <input type="text" id="realName" name="realName" value="<?php echo $userData->realName ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Email</div>
-                            <div class="optionContent">
-                                <input type="email" id="email" name="email" value="<?php echo $userData->email ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Số điện thoại</div>
-                            <div class="optionContent">
-                                <input type="tel" id="tel" name="tel" value="<?php echo $userData->tel ?>">
-                            </div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label"></div>
-                            <div class="optionContent">
-                                <div class="confirmButton">Lưu</div>
-                            </div>
-                        </div>
+                        <?php
+                            foreach ($billAdminList as $e) {
+                                echo "
+                                    <div class='billRow'>
+                                        <div class='firstRow'>
+                                            <div class='billName'>" . $e->servicesName . "</div>
+                                            <div class='billId'>" . $e->billId . "</div>
+                                            <div class='billDate'>" . $e->billDate . "</div>
+                                        </div>
+                                        <div class='secondRow'>
+                                            <div class='billCustomer'>" . $e->customerInfo->customerName . "</div>
+                                            <div class='customerEmail'>" . $e->customerInfo->customerEmail . "</div>
+                                            <div class='custerTel'>" . $e->customerInfo->customerTel . "</div>
+                                        </div>
+                                        <div class='removeButton'>Xóa đơn</div>
+                                    </div>";
+                            }
+                        ?>
                     </div>
                 </div>
             </div>

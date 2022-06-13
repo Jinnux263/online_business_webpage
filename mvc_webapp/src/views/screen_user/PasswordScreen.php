@@ -1,29 +1,6 @@
 <?php
-    // Variable for account type
-    $accountType = "admin";
-
-    // Prototype for user data
-    class userDetail
-    {
-        public $userName;
-        public $realName;
-        public $email;
-        public $tel;
-
-        public function __construct($uName, $rName, $email, $tel)
-        {
-            $this->userName = $uName;
-            $this->realName = $rName;
-            $this->email = $email;
-            $this->tel = $tel;
-        }
-    }
-
-    // User data taken from database
-    // $userData = null;
-
-    // == TEST PURPOSE ==
-    $userData = new userDetail("Try-Z", "Lô Hoàng Khôi Nguyên", "tryz@vcl.works", "0727 727 727");
+// Variable for account type
+$accountType = "admin";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/header.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account.css">
-    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/general.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/account/password.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
     <script defer src="/mvc_webapp/public/js/deps/index.js"></script>
@@ -71,30 +48,26 @@
                 </div>
                 <div class="settingsContent">
                     <div class="headingSection">
-                        <div class="settingsHeading">Thông tin tài khoản</div>
-                        <div class="settingsDesc">Chỉnh sửa thông tin tài khoản của bạn</div>
+                        <div class="settingsHeading">Thay đổi mật khẩu</div>
+                        <div class="settingsDesc">Chỉnh sửa thông tin mật khẩu của bạn</div>
                     </div>
                     <div class="innerSection">
                         <div class="optionRow">
-                            <div class="label">Tên đăng nhập</div>
-                            <div class="optionContent"><?php echo $userData->userName; ?></div>
-                        </div>
-                        <div class="optionRow">
-                            <div class="label">Tên khách hàng</div>
+                            <label for="oldPwd">Mật khẩu cũ</label>
                             <div class="optionContent">
-                                <input type="text" id="realName" name="realName" value="<?php echo $userData->realName ?>">
+                                <input type="password" id="oldPwd" name="oldPwd">
                             </div>
                         </div>
                         <div class="optionRow">
-                            <div class="label">Email</div>
+                            <label for="newPwd">Mật khẩu mới</label>
                             <div class="optionContent">
-                                <input type="email" id="email" name="email" value="<?php echo $userData->email ?>">
+                                <input type="password" id="newPwd" name="newPwd">
                             </div>
                         </div>
                         <div class="optionRow">
-                            <div class="label">Số điện thoại</div>
+                            <label for="confPwd">Xác nhận mật khẩu</label>
                             <div class="optionContent">
-                                <input type="tel" id="tel" name="tel" value="<?php echo $userData->tel ?>">
+                                <input type="password" id="confPwd" name="confPwd">
                             </div>
                         </div>
                         <div class="optionRow">

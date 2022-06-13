@@ -30,11 +30,11 @@
     
     transition: ease-in-out 100ms;
 
-    background:rgb(225, 234, 255);
+    background:rgb(245, 226, 214);
 }
 
 .addNews:hover {
-    color:rgba(135, 156, 187, 0.863);
+    color:rgb(255, 196, 160);
 }
 
 .newsPreview {

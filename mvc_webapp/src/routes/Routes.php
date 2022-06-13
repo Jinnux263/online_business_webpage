@@ -8,7 +8,7 @@ $controllers = array(
   'AuthenticationController' => ['index', 'error', 'login', 'logout', 'register'],
   'AdminController' => ['index', 'error'],
   'ProductDetailController' => ['index', 'error', 'products', 'pricing'],
-  'UserController' => ['index', 'error'],
+  'UserController' => ['index', 'error', 'account', 'bills', 'billsAdmin', 'servicesAdmin', 'postAdmin', 'password'],
   'PostsController' => ['index', 'error', 'news'],
 ); 
 

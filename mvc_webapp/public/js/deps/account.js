@@ -31,7 +31,3 @@ settingsLoad = (option) => {
 };
 
 settingsLoad(settingsParam);
-
-removeBox = (e) => {
-    e.parentNode.remove();
-}

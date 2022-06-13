@@ -17,7 +17,31 @@ class UserController extends BaseController
     {
       $this->render('UserScreen');
     }
+
+    public function bills()
+    {
+      $this->render('BillScreen');
+    }
     
+    public function billsAdmin()
+    {
+      $this->render('BillsAdminScreen');
+    }
+    
+    public function servicesAdmin()
+    {
+      $this->render('ServicesAdminScreen');
+    }
+    
+    public function postAdmin()
+    {
+      $this->render('PostAdminScreen');
+    }
+    
+    public function password()
+    {
+      $this->render('PasswordScreen');
+    }
 
     // User quan ly post cua minh
     public function addPost($post)
