@@ -70,7 +70,9 @@ a {
 }
 
 .loggedIn {
-    /* width: auto; */
+    width: auto;
+
+    padding-inline: 10px;
     background-color: white;
     box-shadow: 0 3px 10px 0 white;
     color: black;

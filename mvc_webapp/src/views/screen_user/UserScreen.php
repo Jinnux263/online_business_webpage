@@ -1,6 +1,6 @@
 <?php
     // Variable for account type
-    $accountType = "admin";
+    $accountType = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +44,7 @@
                             "
                     ?>
                     <div class="option">Thay đổi mật khẩu</div>
+                    <div class="option logout" onclick="logout()">Đăng xuất</div>
                 </div>
                 <div class="settingsContent"></div>
             </div>

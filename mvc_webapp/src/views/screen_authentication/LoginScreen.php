@@ -30,11 +30,11 @@
                 <div id="wrapper">
                     <div class="header">Đăng nhập</div>
                     <div class="desc">Nếu có chưa có tài khoản, hãy <span class="quickNav" onclick="navigate('AuthenticationController','register');">đăng ký</span> tại đây</div>
-                    <div class="inputContainer">
-                        <input type="text" id="name" name="name" placeholder="Tên đăng nhập">
-                        <input type="password" id="pwd" name="pwd" placeholder="Mật khẩu">
-                    </div>
-                    <button id="loginButton">Đăng nhập</button>
+                    <form action="/mvc_webapp/public/index.php?controller=AuthenticationController&action=login" method="post" class="inputContainer">
+                        <input type="text" id="user" name="user" placeholder="Tên đăng nhập">
+                        <input type="password" id="password" name="password" placeholder="Mật khẩu">
+                        <input type="submit" value="Đăng nhập" class="loginButton">
+                    </form>
                 </div>
             </div>
         </div>

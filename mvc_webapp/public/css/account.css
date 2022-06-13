@@ -84,3 +84,13 @@
     /* padding-inline: 20px; */
 }
 
+.logout {
+    color: red;
+}
+
+.logout:hover {
+    color: white;
+    background: red;
+
+    text-indent: 10px;
+}

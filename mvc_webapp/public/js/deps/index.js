@@ -94,3 +94,12 @@ window.addEventListener('popstate', function (event) {
 navigate = (controller ,path) => {
     location.href=`/mvc_webapp/public/index.php?controller=${controller}&action=${path}`;
 }
+
+logout = () => {
+    $.ajax({
+        type: "POST",
+        url: "/mvc_webapp/public/index.php?controller=AuthenticationController&action=logout"
+    })
+
+    navigate("HomeController", "index");
+}
