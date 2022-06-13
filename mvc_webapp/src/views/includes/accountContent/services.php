@@ -1,6 +1,6 @@
 <?php
     // Prototype for a product detail, which includes doctor's name, description, price and image.
-    class servicesAdminDetail {
+    class servicesDetail {
         public $servicesId;
         public $servicesName;
         public $servicesDesc;
@@ -18,7 +18,7 @@
     }
 
     // A list of productsDetail given by the database
-    $servicesAdminList = [];
+    $servicesList = [];
 ?>
 <script src="deps/services.js"></script>
 <div class="headingSection">
@@ -27,7 +27,7 @@
 </div>
 <div class="innerSection">
     <?php
-        foreach ($servicesAdminList as $e) {
+        foreach ($servicesList as $e) {
             echo '
             <div class="servicesBox">
                 <div class="label">Id dịch vụ</div>

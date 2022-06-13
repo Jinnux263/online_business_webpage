@@ -1,13 +1,15 @@
 <?php
     // Prototype for a product detail, which includes doctor's name, description, price and image.
     class servicesDetail {
+        public $servicesId;
         public $servicesName;
         public $servicesDesc;
         public $servicesPrice;
         public $servicesImg;
 
-        public function __construct($name, $desc, $price, $img)
+        public function __construct($id, $name, $desc, $price, $img)
         {
+            $this->servicesId = $id;
             $this->servicesName = $name;
             $this->servicesDesc = $desc;
             $this->servicesPrice = $price;
@@ -19,6 +21,12 @@
     $servicesList = [];
 
     // == TEST PURPOSE ==
+    $idList = [
+        "plan-1",
+        "plan-2",
+        "plan-3"
+    ];
+    
     $nameList = [
         "Dịch vụ tư vấn trực tiếp tại trung tâm",
         "Dịch vụ tư vấn trực tuyến",
@@ -44,7 +52,7 @@
     ];
 
     for ($i = 0; $i < 3; $i++)
-        $servicesList[$i] = new servicesDetail($nameList[$i], $descList[$i], $priceList[$i], $imgList[$i]);
+        $servicesList[$i] = new servicesDetail($idList[$i], $nameList[$i], $descList[$i], $priceList[$i], $imgList[$i]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
