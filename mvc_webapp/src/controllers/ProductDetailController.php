@@ -20,7 +20,12 @@ class ProductDetailController extends BaseController
 
   public function products()
   {
-    $this->render('ProductScreen');
+    if (isset($_GET['product_id'])) {
+      $data = $this->getProductByID($_GET['product_id']);
+      $this->render('ProductScreen', $data);
+    } else {
+      $this->render('ProductScreen');
+    }
   }
 
   public function order()
