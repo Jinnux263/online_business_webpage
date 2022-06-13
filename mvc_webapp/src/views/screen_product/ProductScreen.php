@@ -41,7 +41,7 @@
 
     ];
 
-    for ($i = 0; $i < 3; $i++)
+    for ($i = 0; $i < 4; $i++)
         $docList[$i] = new docDetail($nameList[$i], $descList[$i],  $imgList[$i]);
 ?>
 <!DOCTYPE html>
