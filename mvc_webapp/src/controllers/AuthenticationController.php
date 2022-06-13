@@ -80,6 +80,13 @@ class AuthenticationController extends BaseController
     }
   }
 
+  static function requireAdminRight() {
+    if (!$_SESSION['isAdmin']) {
+      header('Location:/mvc_webapp/public/index.php');
+      return;
+    }
+  }
+
   static function checkAccount($username, $password) {
     return true;
   }

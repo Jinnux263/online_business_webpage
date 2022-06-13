@@ -17,26 +17,34 @@ class UserController extends BaseController
 
   public function bills()
   {
+    AuthenticationController::requireLogin();
     $this->render('BillScreen');
   }
   
   public function billsAdmin()
   {
+    AuthenticationController::requireLogin();
+    AuthenticationController::requireAdminRight();
     $this->render('BillsAdminScreen');
   }
   
   public function servicesAdmin()
   {
+    AuthenticationController::requireLogin();
+    AuthenticationController::requireAdminRight();
     $this->render('ServicesAdminScreen');
   }
   
   public function postAdmin()
   {
+    AuthenticationController::requireLogin();
+    AuthenticationController::requireAdminRight();
     $this->render('PostAdminScreen');
   }
   
   public function password()
   {
+    AuthenticationController::requireLogin();
     $this->render('PasswordScreen');
   }
   
