@@ -1,8 +1,15 @@
 <?php
     // User info if user has logged in
-    $realName = "";
-    $email = "";
-    $tel = "";
+    if ($_SESSION['authenticated']) {
+        $realName = "Nguyen Van A";
+        $email = "test@gmail.com";
+        $tel = "0123456789";
+    } else {
+        $realName = "";
+        $email = "";
+        $tel = "";
+    }
+    
 
     // Prototype for a product detail, which includes doctor's name, description, price and image.
     class servicesDetail {
