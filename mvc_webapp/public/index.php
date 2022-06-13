@@ -5,6 +5,8 @@ require_once __DIR__.'/../config/Constants.php';
 require_once APP_ROOT.'/src/core/Database.php';
 require_once APP_ROOT.'/src/controllers/AuthenticationController.php';
 
+// $_SESSION['user'] = 'user';
+// $_SESSION['password'] = 'password';
 
 
 // Kiem tra phien coi user co dang nhap
