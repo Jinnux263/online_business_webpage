@@ -64,6 +64,8 @@ input:focus {
     box-shadow: 0 10px 10px -5px rgb(248, 126, 122);
 
     transition: ease-in-out 300ms;
+
+    -webkit-user-select: none;
     user-select: none;
 }
 

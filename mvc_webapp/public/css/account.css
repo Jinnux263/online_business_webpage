@@ -36,7 +36,9 @@
 
     box-shadow: 0 1px 0 0 black;
 
+    -webkit-user-select: none;
     user-select: none;
+
     transition: ease-in-out 100ms;
 }
 

@@ -140,11 +140,11 @@ addServicesBox = () => {
     let labelDoc = createLabel("Mô tả dịch vụ", idx - 1);
     let labelLength = createLabel("Giá", idx - 1);
 
-    let save = document.createElement("div");
+    let save = document.createElement("input");
+    save.setAttribute("type", "submit")
     save.setAttribute("id", `saveButton-${idx - 1}`);
     save.setAttribute("class", "saveButton");
-    save.setAttribute("onclick", "saveService()");
-    save.innerText = "Lưu";
+    save.setAttribute("value", "Lưu");
 
     let remover = document.createElement("div");
     remover.setAttribute("class", "remover");
@@ -154,4 +154,18 @@ addServicesBox = () => {
     box.append(labelId, sId, labelName, sName, labelDoc, sDoc, labelLength, sLength, save, remover);
 
     document.getElementsByClassName("innerSection")[0].insertBefore(box, document.getElementsByClassName("addBox")[0]);
+}
+
+post = () => {
+    let postTitle = document.getElementById("postTitle").value;
+    let postContent = sceditor.instance(textArea).fromBBCode(sceditor.instance(textArea).val(), true);
+
+    $.ajax({
+        type: "POST",
+        url: "",
+        data: {
+            title: postTitle,
+            content: postContent
+        }
+    })
 }

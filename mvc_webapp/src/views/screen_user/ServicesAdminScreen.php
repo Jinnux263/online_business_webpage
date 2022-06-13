@@ -93,7 +93,7 @@
                         <?php
                         foreach ($servicesList as $idx=>$e) {
                             echo '
-                                <div class="servicesBox">
+                                <form action="" method="post" class="servicesBox">
                                     <label for="servicesId-'.$idx.'">Id dịch vụ</label>
                                     <input type="text" id="servicesId-'.$idx.'" name="servicesId-'.$idx.'" class="servicesInput" value="' . $e->servicesId . '">
                                     <label for="servicesName-'.$idx.'">Tên dịch vụ</label>
@@ -102,9 +102,9 @@
                                     <input type="text" id="servicesDesc-'.$idx.'" name="servicesDesc-'.$idx.'" class="servicesInput" value="' . $e->servicesDesc . '">
                                     <label for="servicesPrice-'.$idx.'">Giá</label>
                                     <input type="text" id="servicesPrice-'.$idx.'" name="servicesPrice-'.$idx.'" class="servicesInput" value="' . $e->servicesPrice . '">
-                                    <div id="saveButton-'.$idx.'" class="saveButton" onclick="saveService()">Lưu</div>
+                                    <input type="submit" id="saveButton-'.$idx.'" class="saveButton" value="Lưu">
                                     <div class="remover" onclick="removeBox(this)">-</div>
-                                </div>';
+                                </form>';
                         }
                         ?>
                         <div class="addBox" onclick="addServicesBox()">+</div>

@@ -102,7 +102,7 @@
                                             <div class='customerEmail'>" . $e->customerInfo->customerEmail . "</div>
                                             <div class='custerTel'>" . $e->customerInfo->customerTel . "</div>
                                         </div>
-                                        <div class='removeButton'>Xóa đơn</div>
+                                        <div class='removeButton' onclick='removeBox(this)'>Xóa đơn</div>
                                     </div>";
                             }
                         ?>

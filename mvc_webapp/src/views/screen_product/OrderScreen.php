@@ -91,7 +91,7 @@
             <div id="wrapper">
                 <div class="header">Đăng ký sử dụng dịch vụ</div>
                 <div class="desc">Bước đầu tiên để kết nối với trung tâm tư vấn chúng tôi</div>
-                <div class="inputContainer">
+                <form action="" method="post" class="inputContainer">
                     <label for="name">Họ và tên</label>
                     <input type="text" id="name" name="name" value="<?php if ($realName) echo $realName; ?>">
                     <label for="email">Email</label>
@@ -99,7 +99,7 @@
                     <label for="tel">Số điện thoại</label>
                     <input type="tel" id="tel" name="tel" value="<?php if ($tel) echo $tel; ?>">
                     <label for="name">Chọn dịch vụ</label>
-                    <select name="services" id="services">
+                    <select name="services" id="services" aria-label="services">
                         <?php 
                             foreach ($servicesList as $e) {
                                 echo "
@@ -107,8 +107,8 @@
                             }
                         ?>
                     </select>
-                </div>
-                <button id="contactSubmitButton">Đăng ký</button>
+                    <input type="submit" class="contactSubmitButton" value="Đăng ký">
+                </form>
             </div>
         </div>
 

@@ -74,7 +74,7 @@
                         <div class="settingsHeading">Thông tin tài khoản</div>
                         <div class="settingsDesc">Chỉnh sửa thông tin tài khoản của bạn</div>
                     </div>
-                    <div class="innerSection">
+                    <form action="" method="post" class="innerSection">
                         <div class="optionRow">
                             <div class="label">Tên đăng nhập</div>
                             <div class="optionContent"><?php echo $userData->userName; ?></div>
@@ -82,28 +82,28 @@
                         <div class="optionRow">
                             <div class="label">Tên khách hàng</div>
                             <div class="optionContent">
-                                <input type="text" id="realName" name="realName" value="<?php echo $userData->realName ?>">
+                                <input type="text" id="realName" name="realName" value="<?php echo $userData->realName ?>" aria-label="realName">
                             </div>
                         </div>
                         <div class="optionRow">
                             <div class="label">Email</div>
                             <div class="optionContent">
-                                <input type="email" id="email" name="email" value="<?php echo $userData->email ?>">
+                                <input type="email" id="email" name="email" value="<?php echo $userData->email ?>" aria-label="email">
                             </div>
                         </div>
                         <div class="optionRow">
                             <div class="label">Số điện thoại</div>
                             <div class="optionContent">
-                                <input type="tel" id="tel" name="tel" value="<?php echo $userData->tel ?>">
+                                <input type="tel" id="tel" name="tel" value="<?php echo $userData->tel ?>" aria-label="tel">
                             </div>
                         </div>
                         <div class="optionRow">
                             <div class="label"></div>
                             <div class="optionContent">
-                                <div class="confirmButton">Lưu</div>
+                                <input type="submit" class="confirmButton" value="Lưu">
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

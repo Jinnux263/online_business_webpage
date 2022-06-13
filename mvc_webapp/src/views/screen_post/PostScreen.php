@@ -33,7 +33,7 @@
                     <input type="text" id="postTitle" name="postTitle">
                     <div class="label">Nội dung bài đăng</div>
                     <textarea name="postContent" id="postContent" cols="30" rows="10"></textarea>
-                    <div class="submitButton">Đăng bài</div>
+                    <div class="submitButton" onclick="post()">Đăng bài</div>
                 </div>
             </div>
         </div>
