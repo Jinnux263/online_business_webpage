@@ -1,13 +1,15 @@
 <?php
     // Information about login session
-    $loggedStatus = false;
-    $username;
-    $avatarURL;
-
-    // == TEST PURPOSE ==
-    $loggedStatus = true;
-    $username = "Try-Z";
-    $avatarURL = "https://pbs.twimg.com/profile_images/1522078259243982849/lnlVE1iL_400x400.jpg";
+    if ($_SESSION['authenticated']) {
+        $loggedStatus = $_SESSION['authenticated'];
+        $username =$_SESSION['user'];
+        $avatarURL = "https://pbs.twimg.com/profile_images/1522078259243982849/lnlVE1iL_400x400.jpg";
+    } else {
+        $loggedStatus = false;
+        // $loggedStatus = true;
+        // $username = "Try-Z";
+        // $avatarURL = "https://pbs.twimg.com/profile_images/1522078259243982849/lnlVE1iL_400x400.jpg";
+    }
 ?>
 <div id="headerTab">
     <div class="btn" onclick="navigate('HomeController','home');">Trang chủ</div>

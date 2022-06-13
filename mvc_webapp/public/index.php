@@ -3,22 +3,27 @@ session_start();
 
 require_once __DIR__.'/../config/Constants.php';
 require_once APP_ROOT.'/src/core/Database.php';
+require_once APP_ROOT.'/src/controllers/AuthenticationController.php';
+
+
 
 // Kiem tra phien coi user co dang nhap
 if (isset($_SESSION['user']) && isset($_SESSION['password'])) {
   // Check coi user con dung voi tai khoan nay khong
-  if (true) {
+  $checked = AuthenticationController::checkAccount($_SESSION['user'], $_SESSION['password']);
+  if ($checked) {
   // Tao bien luu thong tin user de su dung, dat bien de check coi da dang nhap hay chua
-    $user;
-    $authenticated = true;
+    $_SESSION['authenticated'] = true;
   } else {
-    $authenticated = false;
+    $_SESSION['authenticated'] = false;
     unset($_SESSION['user']);
     unset($_SESSION['password']);
   }
 } else {
-  $authenticated = false;
+  $_SESSION['authenticated'] = false;
 }
+
+
 
 // Kiem tra controller voi action
 if (isset($_GET['controller'])) {
