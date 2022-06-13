@@ -1,7 +1,4 @@
 <?php
-    // Variable for account type
-    $accountType = "admin";
-
     // Prototype for a product detail, which includes doctor's name, description, price and image.
     class servicesDetail {
         public $servicesId;
@@ -74,7 +71,7 @@
                     <div class="option" onclick="navigate('UserController','account')">Thông tin chung</div>
                     <div class="option" onclick="navigate('UserController','bills')">Dịch vụ đã đặt</div>
                     <?php
-                    if ($accountType == "admin")
+                    if (!$_SESSION['isAdmin'])
                         echo "
                                 <div class='option' onclick=\"navigate('UserController','servicesAdmin')\">Quản lý dịch vụ</div>
                                 <div class='option' onclick=\"navigate('UserController','billsAdmin')\">Quản lý đơn đặt</div>

@@ -1,7 +1,4 @@
 <?php
-    // Variable for account type
-    $accountType = "admin";
-
     // A prototype for a bill detail, which includes the service name, bill Id and date
     class billDetail {
         public $servicesName;
@@ -57,7 +54,7 @@
                     <div class="option" onclick="navigate('UserController','account')">Thông tin chung</div>
                     <div class="option" onclick="navigate('UserController','bills')">Dịch vụ đã đặt</div>
                     <?php
-                    if ($accountType == "admin")
+                    if (!$_SESSION['isAdmin'])
                         echo "
                                 <div class='option' onclick=\"navigate('UserController','servicesAdmin')\">Quản lý dịch vụ</div>
                                 <div class='option' onclick=\"navigate('UserController','billsAdmin')\">Quản lý đơn đặt</div>
