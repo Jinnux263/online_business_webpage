@@ -28,7 +28,7 @@
         <div id="app">
             <div id="content">
                 <div id="title">
-                    NẾU BẠN GẶP VẤN ĐỀ<br>
+                    NẾU BẠN GẶP VẤN ĐỀ TÂM LÝ<br>
                     HÃY LIÊN HỆ VỚI CHÚNG TÔI
                 </div>
                 <div id="subText">

@@ -4,6 +4,13 @@
         public $docName;
         public $docDesc;
         public $docImg;
+
+        public function __construct($name, $desc, $img)
+        {
+            $this->docName = $name;
+            $this->docDesc = $desc;
+            $this->docImg = $img;
+        }
     }
 
     // A list of servicesDetail given by the database
@@ -34,12 +41,8 @@
 
     ];
 
-    for ($i = 0; $i < 3; $i++) {
-        $docList[$i] = new docDetail();
-        $docList[$i]->docName = $nameList[$i];
-        $docList[$i]->docDesc = $descList[$i];
-        $docList[$i]->docImg = $imgList[$i];
-    }
+    for ($i = 0; $i < 3; $i++)
+        $docList[$i] = new docDetail($nameList[$i], $descList[$i],  $imgList[$i]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

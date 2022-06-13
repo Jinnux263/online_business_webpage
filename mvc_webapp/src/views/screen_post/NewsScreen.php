@@ -5,19 +5,22 @@
         public $postDate;
         public $postContent;
         public $postImg;
+
+        public function __construct($title, $date, $content, $img)
+        {
+            $this->postTitle = $title;
+            $this->postDate = $date;
+            $this->postContent = $content;
+            $this->postImg = $img;
+        }
     }
 
     // A list of postDetail given by the database
     $postList = [];
 
     // == TEST PURPOSE ==
-    for ($i = 0; $i < 5; $i++) {
-        $postList[$i] = new postDetail();
-        $postList[$i]->postTitle = "Thử nghiệm ".$i;
-        $postList[$i]->postDate = "Date: ".$i;
-        $postList[$i]->postContent = "Đây là thử nghiệm ".$i;
-        $postList[$i]->postImg = "https://cdnb.artstation.com/p/assets/images/images/019/036/961/large/minh-hai-do-1551940067489.jpg?1561728310";
-    }
+    for ($i = 0; $i < 5; $i++)
+        $postList[$i] = new postDetail("Thử nghiệm", "12/2/2222", "Test Content", "https://cdnb.artstation.com/p/assets/images/images/019/036/961/large/minh-hai-do-1551940067489.jpg?1561728310");
 ?>
 <!DOCTYPE html>
 <html lang="en">

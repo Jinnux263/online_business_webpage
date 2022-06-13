@@ -5,6 +5,14 @@
         public $servicesDesc;
         public $servicesPrice;
         public $servicesImg;
+
+        public function __construct($name, $desc, $price, $img)
+        {
+            $this->servicesName = $name;
+            $this->servicesDesc = $desc;
+            $this->servicesPrice = $price;
+            $this->servicesImg = $img;
+        }
     }
 
     // A list of productsDetail given by the database
@@ -35,13 +43,8 @@
         "https://cdn.bookingcare.vn/fr/w800/2020/12/23/172913-chuyen-gia-tam-ly.jpg"
     ];
 
-    for ($i = 0; $i < 3; $i++) {
-        $servicesList[$i] = new servicesDetail();
-        $servicesList[$i]->servicesName = $nameList[$i];
-        $servicesList[$i]->servicesDesc = $descList[$i];
-        $servicesList[$i]->servicesPrice = $priceList[$i];
-        $servicesList[$i]->servicesImg = $imgList[$i];
-    }
+    for ($i = 0; $i < 3; $i++)
+        $servicesList[$i] = new servicesDetail($nameList[$i], $descList[$i], $priceList[$i], $imgList[$i]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

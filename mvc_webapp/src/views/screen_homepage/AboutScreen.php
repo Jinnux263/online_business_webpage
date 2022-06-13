@@ -4,6 +4,13 @@
         public $aboutHeader;
         public $aboutDesc;
         public $aboutImg;
+
+        public function __construct($header, $desc, $img)
+        {
+            $this->aboutHeader = $header;
+            $this->aboutDesc = $desc;
+            $this->aboutImg = $img;
+        }
     }
 
     // A list of aboutDetail given by the database
@@ -28,12 +35,8 @@
         "https://i0.wp.com/post.psychcentral.com/wp-content/uploads/sites/4/2021/09/close-up-mental-health-professional-therapist-clipboard-taking-notes-counseling-1296x728-header-1024x575.jpg?w=1155&h=1528"
     ];
 
-    for ($i = 0; $i < 3; $i++) {
-        $aboutList[$i] = new aboutDetail();
-        $aboutList[$i]->aboutHeader = $headerList[$i];
-        $aboutList[$i]->aboutDesc = $descList[$i];
-        $aboutList[$i]->aboutImg = $imgList[$i];
-    }
+    for ($i = 0; $i < 3; $i++)
+        $aboutList[$i] = new aboutDetail($headerList[$i], $descList[$i], $imgList[$i]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
