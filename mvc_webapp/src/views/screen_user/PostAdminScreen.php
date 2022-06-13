@@ -95,7 +95,7 @@
                                     </div>";
                             }
                         ?>
-                        <div class="addNews" onclick="load('post')">+</div>
+                        <div class="addNews" onclick="navigate('PostsController', 'post')">+</div>
                     </div>
                 </div>
             </div>

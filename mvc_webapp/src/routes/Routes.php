@@ -9,7 +9,7 @@ $controllers = array(
   'AdminController' => ['index', 'error'],
   'ProductDetailController' => ['index', 'error', 'products', 'pricing'],
   'UserController' => ['index', 'error', 'account', 'bills', 'billsAdmin', 'servicesAdmin', 'postAdmin', 'password'],
-  'PostsController' => ['index', 'error', 'news'],
+  'PostsController' => ['index', 'error', 'news', 'post'],
 ); 
 
 

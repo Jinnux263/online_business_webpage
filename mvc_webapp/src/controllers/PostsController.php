@@ -18,6 +18,10 @@ class PostsController extends BaseController
     $this->render('NewsScreen');
   }
 
+  public function post()
+  {
+    $this->render('PostScreen');
+  }
 
   // Ham get tat ca post
   public function getNews()
