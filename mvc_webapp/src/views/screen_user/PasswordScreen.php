@@ -46,7 +46,7 @@ $accountType = "admin";
                     <div class="option" onclick="navigate('UserController','password')">Thay đổi mật khẩu</div>
                     <div class="option logout" onclick="logout()">Đăng xuất</div>
                 </div>
-                <div class="settingsContent">
+                <form action="" method="post" class="settingsContent">
                     <div class="headingSection">
                         <div class="settingsHeading">Thay đổi mật khẩu</div>
                         <div class="settingsDesc">Chỉnh sửa thông tin mật khẩu của bạn</div>
@@ -73,11 +73,11 @@ $accountType = "admin";
                         <div class="optionRow">
                             <div class="label"></div>
                             <div class="optionContent">
-                                <div class="confirmButton">Lưu</div>
+                                <input type="submit" class="confirmButton" value="Lưu">
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
