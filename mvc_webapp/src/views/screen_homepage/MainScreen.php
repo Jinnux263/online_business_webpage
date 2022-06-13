@@ -28,15 +28,15 @@
         <div id="app">
             <div id="content">
                 <div id="title">
-                    NẾU BẠN GẶP VẤN ĐỀ TÂM LÝ<br>
-                    HÃY LIÊN HỆ VỚI CHÚNG TÔI
+                    TINH THẦN LÀ NỀN TẢNG<br>
+                    CHO CƠ THỂ KHỎE MẠNH
                 </div>
                 <div id="subText">
                     Trung tâm Tư vấn Tâm lý Mental First sẵn sàng hỗ trợ bạn trong cuộc sống. <br>
-                    Bắt đầu chỉ với việc nhập email của bạn!
+                    Bắt đầu một cuộc hẹn ngay!
                 </div>
-                <input type="text" id="emailInput" placeholder="Email">
-                <button id="submitButton">Gửi</button>
+                <!-- <input type="text" id="emailInput" placeholder="Email"> -->
+                <button id="submitButton" onclick="navigate('ProductDetailController','products');">Đặt lịch ngay</button>
             </div>
         </div>
     </div>
