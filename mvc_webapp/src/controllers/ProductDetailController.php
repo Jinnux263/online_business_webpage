@@ -23,6 +23,11 @@ class ProductDetailController extends BaseController
     $this->render('ProductScreen');
   }
 
+  public function order()
+  {
+    $this->render('OrderScreen');
+  }
+
   public function showDetails()
   {
     $this->render('ProductScreen');

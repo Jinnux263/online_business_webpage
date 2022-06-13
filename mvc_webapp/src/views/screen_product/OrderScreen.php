@@ -1,4 +1,9 @@
 <?php
+    // User info if user has logged in
+    $realName = "";
+    $email = "";
+    $tel = "";
+
     // Prototype for a product detail, which includes doctor's name, description, price and image.
     class servicesDetail {
         public $servicesId;
@@ -69,7 +74,7 @@
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/style.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/header.css">
     <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/pricing.css">
+    <link rel="stylesheet" type="text/css" href="/mvc_webapp/public/css/order.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
     <script defer src="/mvc_webapp/public/js/deps/index.js"></script>
@@ -80,27 +85,33 @@
     <?php include APP_ROOT.'/src/views/includes/navbar.php' ?>
 
     <div id="app-container">
-        <div class="page-title">Bảng giá dịch vụ</div>
+        <div class="page-title">Đăng ký dịch vụ</div>
         <div id="app">
-            <div id="content">
-                <?php
-                    foreach ($servicesList as $idx=>$e) {
-                        $pos = "left";
-                        if ($idx % 2 != 0)
-                            $pos = "right";
-
-                        echo "
-                        <div class='plan-container plan-".$pos."' onclick=\"navigate('ProductDetailController','order')\">
-                            <div class='plan-icon' style='background: url(".$e->servicesImg.") center center/cover'></div>
-                            <div class='plan-card'>
-                                <div class='plan-title'>".$e->servicesName."</div>
-                                <div class='plan-desc'>".$e->servicesDesc."</div>
-                                <div class='plan-price'>".$e->servicesPrice."</div>
-                            </div>
-                        </div>";
-                    }
-                ?>
+        <div id="content">
+            <div id="wrapper">
+                <div class="header">Đăng ký sử dụng dịch vụ</div>
+                <div class="desc">Bước đầu tiên để kết nối với trung tâm tư vấn chúng tôi</div>
+                <div class="inputContainer">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" name="name" value="<?php if ($realName) echo $realName; ?>">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="<?php if ($email) echo $email; ?>">
+                    <label for="tel">Số điện thoại</label>
+                    <input type="tel" id="tel" name="tel" value="<?php if ($tel) echo $tel; ?>">
+                    <label for="name">Chọn dịch vụ</label>
+                    <select name="services" id="services">
+                        <?php 
+                            foreach ($servicesList as $e) {
+                                echo "
+                                    <option value='".$e->servicesId."'>".$e->servicesName." - (".$e->servicesPrice.")</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
+                <button id="contactSubmitButton">Đăng ký</button>
             </div>
+        </div>
+
         </div>
     </div>
 
