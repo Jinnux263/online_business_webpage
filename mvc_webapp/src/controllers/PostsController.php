@@ -18,6 +18,18 @@ class PostsController extends BaseController
     $this->render('NewsScreen');
   }
 
+
+  // Ham get tat ca post
+  public function getNews()
+  {
+    $this->render('NewsScreen');
+  }
+
+  public function getNewsByID($id)
+  {
+    $this->render('NewsScreen');
+  }
+
 }
 
 ?>

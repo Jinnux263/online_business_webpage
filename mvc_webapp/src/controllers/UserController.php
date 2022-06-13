@@ -12,12 +12,36 @@ class UserController extends BaseController
   {
     $this->render('UserScreen');
   }
+  
+    public function account()
+    {
+      $this->render('UserScreen');
+    }
+    
 
-  public function account()
-  {
-    $this->render('UserScreen');
-  }
+    // User quan ly post cua minh
+    public function addPost($post)
+    {
+      $this->render('UserScreen');
+    }
+  
+    public function deletePost($id)
+    {
+      $this->render('UserScreen');
+    }
 
+    public function modifyPost($id)
+    {
+      $this->render('UserScreen');
+    }
+
+
+    // Thay doi thong tin user
+    public function modifyUser($id)
+    {
+      $this->render('UserScreen');
+    }
+  
 }
 
 ?>

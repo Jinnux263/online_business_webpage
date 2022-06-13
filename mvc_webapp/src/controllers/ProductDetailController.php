@@ -13,9 +13,9 @@ class ProductDetailController extends BaseController
     $this->render('ProductScreen');
   }
 
-  public function showDetails()
+  public function pricing()
   {
-    $this->render('ProductScreen');
+    $this->render('PricingScreen');
   }
 
   public function products()
@@ -23,10 +23,36 @@ class ProductDetailController extends BaseController
     $this->render('ProductScreen');
   }
 
-  public function pricing()
+  public function showDetails()
+  {
+    $this->render('ProductScreen');
+  }
+  
+
+  // Ham lay data service
+  public function getproducts()
+  {
+    $this->render('ProductScreen');
+  }
+
+  public function getProductByID($id)
+  {
+    $this->render('ProductScreen');
+  }
+
+
+  // Ham cho gia dich vu
+  public function getPrices()
   {
     $this->render('PricingScreen');
   }
+
+  public function getPricesByID($id)
+  {
+    $this->render('PricingScreen');
+  }
+
+  
 
 }
 

@@ -10,7 +10,7 @@
     $avatarURL = "https://pbs.twimg.com/profile_images/1522078259243982849/lnlVE1iL_400x400.jpg";
 ?>
 <div id="headerTab">
-    <div class="btn" onclick="navigate('HomeController','index');">Trang chủ</div>
+    <div class="btn" onclick="navigate('HomeController','home');">Trang chủ</div>
     <div class="btn" onclick="navigate('HomeController','about');">Thông tin</div>
     <div class="btn" onclick="navigate('ProductDetailController','products');">Dịch vụ</div>
     <div class="btn" onclick="navigate('ProductDetailController','pricing');">Bảng giá</div>
@@ -21,7 +21,7 @@
             echo "<div class='btn login' onclick=\"navigate('AuthenticationController','index');\">Đăng nhập</div>";
         else {
             echo "
-                <div class='btn loggedIn' onclick='navigate()'>
+                <div class='btn loggedIn' onclick=\"navigate('UserController', 'index')\">
                     <div class='avatar' style='background: url(".$avatarURL.") center center/cover'></div>
                     <div class='username'>".$username."</div>
                 </div>";

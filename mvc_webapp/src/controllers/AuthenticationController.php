@@ -15,8 +15,11 @@ class AuthenticationController extends BaseController
 
   public function login()
   {
-    $username = $_POST['user'];
-    $password = $_POST['password'];
+    // $username = $_POST['user'];
+    // $password = $_POST['password'];
+
+    $username = "username";
+    $password ="password";
 
     // Check  the username, return result
     $result = true;
