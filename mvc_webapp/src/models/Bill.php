@@ -3,17 +3,30 @@
 class BillModel {
     // Thông tin của một đơn đặt dịch vụ
 
-    protected $id;
-    protected $client;
-    protected $items;
+    public $servicesName;
+    public $billId;
+    public $billDate;
+    public $customerInfo;
 
+    public function __construct($id)
+    {
+        $this->billId = $id;
+    }
 
-    function generate($itemsList) {
+    function getALl() {
 
     }
 
-    function recordBill() {
+    function getById($id) {
+        
+    }
 
+    function deleteById($id) {
+        
+    }
+
+    function add($obj) {
+        
     }
 
 }

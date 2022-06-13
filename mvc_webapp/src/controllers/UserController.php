@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__DIR__) . '/controllers/base_controller/BaseController.php';
 require_once APP_ROOT . '/src/controllers/AuthenticationController.php';
+require_once APP_ROOT . '/src/models/User.php';
 
 class userDetail
 {
@@ -105,8 +106,10 @@ class UserController extends BaseController
 
     // Variable for account type
     $isAdmin = $_SESSION['isAdmin'];
-
-    $userData = new userDetail("Try-Z", "Lô Hoàng Khôi Nguyên", "tryz@vcl.works", "0727 727 727");
+    
+    
+    $userobj = new UserModel($_SESSION['user'], $_SESSION['password']);
+    $userData = new userDetail($userobj->usernames, $userobj->real_name, $userobj->email, $userobj->phone_number);
 
     $data = array('isAdmin' => $isAdmin, 'userData' => $userData);
     $this->render('UserScreen', $data);

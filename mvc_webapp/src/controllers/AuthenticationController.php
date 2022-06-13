@@ -1,5 +1,6 @@
 <?php
 require_once dirname( __DIR__ ).'/controllers/base_controller/BaseController.php';
+require_once APP_ROOT . '/src/models/User.php';
 
 class AuthenticationController extends BaseController
 {
@@ -87,9 +88,10 @@ class AuthenticationController extends BaseController
     }
   }
 
-  static function checkAccount($username, $password) {
-    return true;
-  }
+  // static function checkAccount($username, $password) {
+  //   $authenobj = new UserModel($username, $password);
+  //   return $authenobj->login();
+  // }
 
   function requireAuthenticated() {
     if ($_SESSION['authenticated']) {

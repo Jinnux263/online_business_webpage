@@ -1,9 +1,13 @@
 <?php
+// Co the coi nhu la mot controller
+
+
 session_start();
 
 require_once __DIR__.'/../config/Constants.php';
 require_once APP_ROOT.'/src/core/Database.php';
 require_once APP_ROOT.'/src/controllers/AuthenticationController.php';
+require_once APP_ROOT . '/src/models/User.php';
 
 // $_SESSION['user'] = 'user';
 // $_SESSION['password'] = 'password';
@@ -12,11 +16,13 @@ require_once APP_ROOT.'/src/controllers/AuthenticationController.php';
 // Kiem tra phien coi user co dang nhap
 if (isset($_SESSION['user']) && isset($_SESSION['password'])) {
   // Check coi user con dung voi tai khoan nay khong
-  $checked = AuthenticationController::checkAccount($_SESSION['user'], $_SESSION['password']);
+  $authenobj = new UserModel($_SESSION['user'], $_SESSION['password']);
+  $checked = $authenobj->login();
+
+  // Thanh cong
   if ($checked) {
-  // Tao bien luu thong tin user de su dung, dat bien de check coi da dang nhap hay chua
     $_SESSION['authenticated'] = true;
-    $_SESSION['isAdmin'] = true;
+    $_SESSION['isAdmin'] = $authenobj->type === 'admin';
   } else {
     $_SESSION['authenticated'] = false;
     unset($_SESSION['user']);
