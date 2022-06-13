@@ -16,7 +16,7 @@ if (isset($_SESSION['user']) && isset($_SESSION['password'])) {
   if ($checked) {
   // Tao bien luu thong tin user de su dung, dat bien de check coi da dang nhap hay chua
     $_SESSION['authenticated'] = true;
-    $_SESSION['isAdmin'] = false;
+    $_SESSION['isAdmin'] = true;
   } else {
     $_SESSION['authenticated'] = false;
     unset($_SESSION['user']);

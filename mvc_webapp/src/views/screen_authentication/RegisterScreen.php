@@ -41,17 +41,4 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <?php include APP_ROOT.'/src/views/includes/footer.php' ?>

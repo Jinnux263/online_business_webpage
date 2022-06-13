@@ -1,27 +1,3 @@
-<?php
-    // Prototype for user data
-    class userDetail
-    {
-        public $userName;
-        public $realName;
-        public $email;
-        public $tel;
-
-        public function __construct($uName, $rName, $email, $tel)
-        {
-            $this->userName = $uName;
-            $this->realName = $rName;
-            $this->email = $email;
-            $this->tel = $tel;
-        }
-    }
-
-    // User data taken from database
-    // $userData = null;
-
-    // == TEST PURPOSE ==
-    $userData = new userDetail("Try-Z", "Lô Hoàng Khôi Nguyên", "tryz@vcl.works", "0727 727 727");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +32,7 @@
                     <div class="option" onclick="navigate('UserController','account')">Thông tin chung</div>
                     <div class="option" onclick="navigate('UserController','bills')">Dịch vụ đã đặt</div>
                     <?php
-                    if ($_SESSION['isAdmin'])
+                    if ($isAdmin == "admin")
                         echo "
                                 <div class='option' onclick=\"navigate('UserController','servicesAdmin')\">Quản lý dịch vụ</div>
                                 <div class='option' onclick=\"navigate('UserController','billsAdmin')\">Quản lý đơn đặt</div>
@@ -105,18 +81,5 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <?php include APP_ROOT . '/src/views/includes/footer.php' ?>

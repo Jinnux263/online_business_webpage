@@ -1,37 +1,3 @@
-<?php
-    // A prototype for news preview, which includes the title and the preview image
-    class newsPreview {
-        public $newsTitle;
-        public $newsImg;
-
-        public function __construct($title, $img)
-        {
-            $this->newsTitle = $title;
-            $this->newsImg = $img;
-        }
-    }
-
-    // A list of news taken from database
-    $newsList = [];
-
-    // == TEST PURPOSE ==
-    $titleList = [
-        "Điều trị tâm lý cho trẻ vị thành niên - Bài toàn mới trong ngành tâm lý?",
-        "Hikikomori là gì và tác động của nó đến giới trẻ Nhật Bản",
-        "Trầm cảm và những biểu hiện ban đầu",
-        "Trầm cảm và những biểu hiện ban đầu"
-    ];
-
-    $imgList = [
-        "https://ounews.co/wp-content/uploads/2018/03/shutterstock_174741554-e1519911636917.jpg",
-        "https://kenh14cdn.com/thumb_w/650/2016/hikiko-1471883423991.jpg",
-        "https://vinmec-prod.s3.amazonaws.com/images/20210320_072716_425735_tram-cam.max-1800x1800.jpg",
-        "https://vinmec-prod.s3.amazonaws.com/images/20210320_072716_425735_tram-cam.max-1800x1800.jpg"
-    ];
-
-    for ($i = 0; $i < 4; $i++)
-        $newsList[$i] = new newsPreview($titleList[$i], $imgList[$i]);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +32,7 @@
                     <div class="option" onclick="navigate('UserController','account')">Thông tin chung</div>
                     <div class="option" onclick="navigate('UserController','bills')">Dịch vụ đã đặt</div>
                     <?php
-                    if ($_SESSION['isAdmin'])
+                    if ($isAdmin)
                         echo "
                                 <div class='option' onclick=\"navigate('UserController','servicesAdmin')\">Quản lý dịch vụ</div>
                                 <div class='option' onclick=\"navigate('UserController','billsAdmin')\">Quản lý đơn đặt</div>
@@ -98,18 +64,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <?php include APP_ROOT . '/src/views/includes/footer.php' ?>

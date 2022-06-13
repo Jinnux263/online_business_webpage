@@ -1,40 +1,3 @@
-<?php
-    // A prototype for a bill detail, which includes the service name, bill Id and date
-    class customerDetail {
-        public $customerName;
-        public $customerEmail;
-        public $customerTel;
-
-        public function __construct($name, $email, $tel)
-        {
-            $this->customerName = $name;
-            $this->customerEmail = $email;
-            $this->custerTel = $tel;
-        }
-    }
-
-    class billAdminDetail {
-        public $servicesName;
-        public $billId;
-        public $billDate;
-        public $customerInfo;
-
-        public function __construct($sName, $id, $date, $cName, $email, $tel)
-        {
-            $this->servicesName = $sName;
-            $this->billId = $id;
-            $this->billDate = $date;
-            $this->customerInfo = new customerDetail($cName, $email, $tel);
-        }
-    }
-
-    // List of bills taken from database
-    $billAdminList = [];
-
-    // == TEST PURPOSE ==
-    for ($i = 0; $i < 5; $i++)
-    $billAdminList[$i] = new billAdminDetail("Dịch vụ tư vấn tâm lý trực tiếp", "#009849", "12/2/2022", "Lê Van Dovious Panda", "dvs_pd@ppy.sh", "0727 727 727");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +32,7 @@
                     <div class="option" onclick="navigate('UserController','account')">Thông tin chung</div>
                     <div class="option" onclick="navigate('UserController','bills')">Dịch vụ đã đặt</div>
                     <?php
-                    if ($_SESSION['isAdmin'])
+                    if ($isAdmin)
                         echo "
                                 <div class='option' onclick=\"navigate('UserController','servicesAdmin')\">Quản lý dịch vụ</div>
                                 <div class='option' onclick=\"navigate('UserController','billsAdmin')\">Quản lý đơn đặt</div>
@@ -108,18 +71,5 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <?php include APP_ROOT . '/src/views/includes/footer.php' ?>

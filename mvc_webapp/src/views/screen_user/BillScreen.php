@@ -1,25 +1,3 @@
-<?php
-    // A prototype for a bill detail, which includes the service name, bill Id and date
-    class billDetail {
-        public $servicesName;
-        public $billId;
-        public $billDate;
-
-        public function __construct($name, $id, $date)
-        {
-            $this->servicesName = $name;
-            $this->billId = $id;
-            $this->billDate = $date;
-        }
-    }
-
-    // List of bills taken from database
-    $billList = [];
-
-    // == TEST PURPOSE ==
-    for ($i = 0; $i < 5; $i++)
-        $billList[$i] = new billDetail("Dịch vụ tư vấn tâm lý trực tiếp", "#009849", "12/2/2022");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +32,7 @@
                     <div class="option" onclick="navigate('UserController','account')">Thông tin chung</div>
                     <div class="option" onclick="navigate('UserController','bills')">Dịch vụ đã đặt</div>
                     <?php
-                    if ($_SESSION['isAdmin'])
+                    if ($isAdmin)
                         echo "
                                 <div class='option' onclick=\"navigate('UserController','servicesAdmin')\">Quản lý dịch vụ</div>
                                 <div class='option' onclick=\"navigate('UserController','billsAdmin')\">Quản lý đơn đặt</div>
@@ -85,18 +63,5 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <?php include APP_ROOT . '/src/views/includes/footer.php' ?>
