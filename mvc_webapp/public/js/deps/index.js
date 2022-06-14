@@ -127,14 +127,16 @@ createLabel = (text, idx) => {
 
 addServicesBox = () => {
     let idx = document.querySelectorAll("[id*=servicesName]").length + 1;
-    let box = document.createElement("div");
+    let box = document.createElement("form");
+    box.setAttribute("method", "post")
+    box.setAttribute("action", "");
     box.setAttribute("class", "servicesBox");
 
-    let sId = createInput(`servicesId-${idx}`, "servicesInput", ``);
-    let sName = createInput(`servicesName-${idx}`, "servicesInput", ``);
-    let sDesc = createInput(`servicesDesc-${idx}`, "servicesInput", ``);
-    let sPrice = createInput(`servicesPrice-${idx}`, "servicesInput", ``);
-    let sImg = createInput(`servicesImg-${idx}`, "servicesInput", ``);
+    let sId = createInput(`servicesId`, "servicesInput", ``);
+    let sName = createInput(`servicesName`, "servicesInput", ``);
+    let sDesc = createInput(`servicesDesc`, "servicesInput", ``);
+    let sPrice = createInput(`servicesPrice`, "servicesInput", ``);
+    let sImg = createInput(`servicesImg`, "servicesInput", ``);
 
     let labelId = createLabel("Id dịch vụ", idx - 1);
     let labelName = createLabel("Tên dịch vụ", idx - 1);
