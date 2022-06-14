@@ -104,7 +104,11 @@ logout = () => {
     navigate("HomeController", "index");
 }
 
-removeBox = (e) => {
+removeBoxService = (e) => {
+    e.parentNode.remove();
+}
+
+removeBoxPost = (e) => {
     e.parentNode.remove();
 }
 
@@ -155,7 +159,7 @@ addServicesBox = () => {
 
     let remover = document.createElement("div");
     remover.setAttribute("class", "remover");
-    remover.setAttribute("onclick", "removeBox(this)");
+    remover.setAttribute("onclick", "removeBoxService(this)");
     remover.innerText = '-';
 
     box.append(labelId, sId, labelName, sName, labelDesc, sDesc, labelPrice, sPrice, labelImg, sImg, save, remover);

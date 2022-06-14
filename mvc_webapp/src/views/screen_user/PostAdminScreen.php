@@ -54,7 +54,7 @@
                                     <div class='newsContainer'>
                                         <div class='newsPreview' style='background: url(" . $e->newsImg . ") center center/cover'></div>
                                         <div class='newsTitle'>" . $e->newsTitle . "</div>
-                                        <div class='remover' onclick='removeBox(this)'>-</div>
+                                        <div class='remover' onclick='removeBoxPost(this)'>-</div>
                                     </div>";
                             }
                         ?>
