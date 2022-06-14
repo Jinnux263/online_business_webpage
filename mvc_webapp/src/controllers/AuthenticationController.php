@@ -79,7 +79,7 @@ class AuthenticationController extends BaseController
 
   // Kiem tra coi user co trong he thong khong
   static function requireLogin() {
-    if ($_SESSION['authenticated']) {
+    if (!$_SESSION['authenticated']) {
       header('Location:/mvc_webapp/public/index.php?controller=AuthenticationController&action=index');
       return;
     }
