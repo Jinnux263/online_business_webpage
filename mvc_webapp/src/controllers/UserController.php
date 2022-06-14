@@ -159,4 +159,15 @@ class UserController extends BaseController
       // Make changes to services data
     }
   }
+
+  public function postChange() {
+    if (isset($_POST['postId'])) {
+      // Make changes to post data
+
+      // Delete post
+      if (isset($_POST['deletePost'])) {
+        
+      }
+    }
+  }
 }

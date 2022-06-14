@@ -51,7 +51,7 @@
                         <?php
                         foreach ($servicesList as $idx=>$e) {
                             echo '
-                                <form action="" method="post" class="servicesBox">
+                                <form action="/mvc_webapp/public/index.php?controller=UserController&action=servicesChange" method="post" class="servicesBox">
                                     <label for="servicesId-'.$idx.'">Id dịch vụ</label>
                                     <input type="text" id="servicesId-'.$idx.'" name="servicesId" class="servicesInput" value="' . $e->servicesId . '" readonly>
                                     <label for="servicesName-'.$idx.'">Tên dịch vụ</label>
