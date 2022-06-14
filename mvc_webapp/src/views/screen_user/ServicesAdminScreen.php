@@ -60,6 +60,8 @@
                                     <input type="text" id="servicesDesc-'.$idx.'" name="servicesDesc-'.$idx.'" class="servicesInput" value="' . $e->servicesDesc . '">
                                     <label for="servicesPrice-'.$idx.'">Giá</label>
                                     <input type="text" id="servicesPrice-'.$idx.'" name="servicesPrice-'.$idx.'" class="servicesInput" value="' . $e->servicesPrice . '">
+                                    <label for="servicesImg-'.$idx.'">Hình ảnh</label>
+                                    <input type="text" id="servicesImg-'.$idx.'" name="servicesImg-'.$idx.'" class="servicesInput" value="' . $e->servicesImg . '">
                                     <input type="submit" id="saveButton-'.$idx.'" class="saveButton" value="Lưu">
                                     <div class="remover" onclick="removeBox(this)">-</div>
                                 </form>';

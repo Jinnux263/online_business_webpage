@@ -132,13 +132,15 @@ addServicesBox = () => {
 
     let sId = createInput(`servicesId-${idx}`, "servicesInput", ``);
     let sName = createInput(`servicesName-${idx}`, "servicesInput", ``);
-    let sDoc = createInput(`servicesDesc-${idx}`, "servicesInput", ``);
-    let sLength = createInput(`servicesPrice-${idx}`, "servicesInput", ``);
+    let sDesc = createInput(`servicesDesc-${idx}`, "servicesInput", ``);
+    let sPrice = createInput(`servicesPrice-${idx}`, "servicesInput", ``);
+    let sImg = createInput(`servicesImg-${idx}`, "servicesInput", ``);
 
     let labelId = createLabel("Id dịch vụ", idx - 1);
     let labelName = createLabel("Tên dịch vụ", idx - 1);
-    let labelDoc = createLabel("Mô tả dịch vụ", idx - 1);
-    let labelLength = createLabel("Giá", idx - 1);
+    let labelDesc = createLabel("Mô tả dịch vụ", idx - 1);
+    let labelPrice = createLabel("Giá", idx - 1);
+    let labelImg = createLabel("Hình ảnh", idx - 1);
 
     let save = document.createElement("input");
     save.setAttribute("type", "submit")
@@ -151,7 +153,7 @@ addServicesBox = () => {
     remover.setAttribute("onclick", "removeBox(this)");
     remover.innerText = '-';
 
-    box.append(labelId, sId, labelName, sName, labelDoc, sDoc, labelLength, sLength, save, remover);
+    box.append(labelId, sId, labelName, sName, labelDesc, sDesc, labelPrice, sPrice, labelImg, sImg, save, remover);
 
     document.getElementsByClassName("innerSection")[0].insertBefore(box, document.getElementsByClassName("addBox")[0]);
 }

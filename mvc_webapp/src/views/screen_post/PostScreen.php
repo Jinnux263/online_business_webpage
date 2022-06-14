@@ -31,6 +31,8 @@
                 <div class="writeContainer">
                     <div class="label">Tiêu đề bài đăng</div>
                     <input type="text" id="postTitle" name="postTitle">
+                    <div class="label">Hình ảnh</div>
+                    <input type="text" id="postImg" name="postImg">
                     <div class="label">Nội dung bài đăng</div>
                     <textarea name="postContent" id="postContent" cols="30" rows="10"></textarea>
                     <div class="submitButton" onclick="post()">Đăng bài</div>

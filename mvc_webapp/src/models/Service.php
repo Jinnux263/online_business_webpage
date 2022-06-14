@@ -32,7 +32,7 @@ class ServiceModel
         $descList = [
             "60% khách hàng là bệnh nhân của chúng tôi đã quyết định đến trung tâm để tham gia vào các khóa điều trị cộng đồng. Kết quả mang lại là rất rõ rệt và được đánh giá rất cao trong số các khách hàng. Nếu bạn cảm thấy không phiền, hãy đến với trung tâm của chúng tôi để nhận được nhiều ưu đãi hơn.",
             "Trong mùa dịch bệnh đang hoành hành, nhiều khách hàng cảm thấy rất e ngại với việc tiếp xúc gần cũng như phải ra ngoài. Thấu hiểu được điều đó, mô hình chăm sóc và tư vấn sức khỏe tâm lý của khách hàng trực tuyến đã được chúng tôi triển khai và tiến hành từ rất sớm. Các bạn sẽ được cung cấp một hệ thống để liên lạc với các bác sĩ 24/7.",
-            "\"Hikikomori\" là một thuật ngữ được dùng để chỉ những người không muốn tiếp xúc với xã hội bên ngoài. Đây là một trong những tình trạng đáng báo động trong xã hội Nhật Bản những năm trở lại đây. Vì thế, chúng tôi đã dành ra một đội ngũ đặc biệt để đến tận nhà và hỗ trợ điều trị các chứng bệnh về tâm lý xã hội cho bệnh nhân."
+            "&quot;Hikikomori&quot; là một thuật ngữ được dùng để chỉ những người không muốn tiếp xúc với xã hội bên ngoài. Đây là một trong những tình trạng đáng báo động trong xã hội Nhật Bản những năm trở lại đây. Vì thế, chúng tôi đã dành ra một đội ngũ đặc biệt để đến tận nhà và hỗ trợ điều trị các chứng bệnh về tâm lý xã hội cho bệnh nhân."
         ];
 
         $priceList = [
