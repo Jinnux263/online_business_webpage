@@ -13,7 +13,11 @@ class ServiceModel
 
     function __construct()
     {
-        // A list of productsDetail given by the database
+        $DB = new Database();
+        $DBconn = $DB->getInstance();
+        $result = $DBconn->query("SELECT * FROM orders;");
+
+        
         $servicesList = [];
 
         // == TEST PURPOSE ==

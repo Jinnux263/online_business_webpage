@@ -23,7 +23,7 @@
             echo "<div class='btn login' onclick=\"navigate('AuthenticationController','index');\">Đăng nhập</div>";
         else {
             echo "
-                <div class='btn loggedIn' onclick=\"navigate('UserController', 'index')\">
+                <div class='btn loggedIn' onclick=\"navigate('UserController', 'account')\">
                     <div class='avatar' style='background: url(".$avatarURL.") center center/cover'></div>
                     <div class='username'>".$username."</div>
                 </div>";

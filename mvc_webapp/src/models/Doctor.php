@@ -13,6 +13,10 @@ class DoctorModel {
 
     function __construct() {
 
+        $DB = new Database();
+        $DBconn = $DB->getInstance();
+        $result = $DBconn->query("SELECT * FROM orders;");
+
         $docList = [];
 
         // == TEST PURPOSE ==
