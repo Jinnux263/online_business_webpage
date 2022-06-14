@@ -67,14 +67,27 @@ class AuthenticationController extends BaseController
     $this->requireAuthenticated();
 
       // Check ca 4 truong gui len cua form
+      if (isset($_POST['user']) && isset($_POST['email']) && isset($_POST['pwd']) && isset($_POST['confirm_pwd'])) {
+        $username = $_POST['user'];
+        $password = $_POST['pwd'];
+        $password2 = $_POST['confirm_pwd'];
 
-    if (false) {
-      // Dang ky tai khoan va chuyen huong toi trang login
+        $email = $_POST['email'];
+        $name = "Nguyen Van A";
 
-      header('Location:/mvc_webapp/public/index.php?controller=AuthenticationController&action=index');
-    } else {
-      $this->render('RegisterScreen');
-    }
+        if ($password != $password2) {
+          $this->render('RegisterScreen');
+          return;
+        }
+        
+        
+        $user = new UserModel($username, $password);
+        $result = $user -> register($email, $name);
+
+        header('Location:/mvc_webapp/public/index.php?controller=AuthenticationController&action=index');
+      } else {
+        $this->render('RegisterScreen');
+      }
   }
 
   // Kiem tra coi user co trong he thong khong

@@ -38,13 +38,19 @@ class UserModel {
         }
     }
 
-    function register() {
+    function register($email, $name) {
+
+        try {
+
         $DB = new Database();
         $DBconn = $DB->getInstance();
-        $result = $DBconn->query("");
+        $result = $DBconn->query("INSERT INTO `users` (`USERNAME`, `EMAIL`, `REALNAME`, `PHONENUM`, `PASSWORD`, `USER_TYPE`) VALUES ('" . $this->usernames . "', '" . $email . "' , '" . $name . "', '', '" . $this->password . "', 'user');");
+        } catch(Exception $e) {
+            return false;
+        }
 
-
-
+        $x = $result->fetch_array();
+        return $x;
     }
 
     function changePassword($username, $password) {
