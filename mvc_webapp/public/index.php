@@ -22,8 +22,8 @@ if (isset($_SESSION['user']) && isset($_SESSION['password'])) {
   // Thanh cong
   if ($checked) {
     $_SESSION['authenticated'] = true;
-    $_SESSION['isAdmin'] = true;
-    // $_SESSION['isAdmin'] = $authenobj->type === 'admin';
+    // $_SESSION['isAdmin'] = true;
+    $_SESSION['isAdmin'] = $authenobj->type === 'admin';
   } else {
     $_SESSION['authenticated'] = false;
     unset($_SESSION['user']);
