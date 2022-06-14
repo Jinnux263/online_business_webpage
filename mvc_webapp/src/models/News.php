@@ -10,6 +10,10 @@ class NewsModel {
     public $newsList;
 
     function __construct() {
+
+        $DB = new Database();
+        $DBconn = $DB->getInstance();
+        $result = $DBconn->query("SELECT * FROM orders;");
         $newsList = [];
 
     // == TEST PURPOSE ==

@@ -49,20 +49,6 @@ class userDetail
   }
 }
 
-// class billDetail
-// {
-//   public $servicesName;
-//   public $billId;
-//   public $billDate;
-
-//   public function __construct($name, $id, $date)
-//   {
-//     $this->servicesName = $name;
-//     $this->billId = $id;
-//     $this->billDate = $date;
-//   }
-// }
-
 class customerDetail
 {
   public $customerName;
@@ -92,18 +78,6 @@ class billAdminDetail
     $this->customerInfo = new customerDetail($cName, $email, $tel);
   }
 }
-
-// class newsPreview
-// {
-//   public $newsTitle;
-//   public $newsImg;
-
-//   public function __construct($title, $img)
-//   {
-//     $this->newsTitle = $title;
-//     $this->newsImg = $img;
-//   }
-// }
 
 class newsDetail
 {
