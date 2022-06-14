@@ -55,3 +55,5 @@ INSERT INTO `product` (`ID`, `NAME`, `DESCRIPTION`, `IMG`, `PRICE`, `DAYS`) VALU
 INSERT INTO `users` (`USERNAME`, `EMAIL`, `REALNAME`, `PHONENUM`, `PASSWORD`, `USER_TYPE`) VALUES
 ('bao12345', 'bao@gmail.com' , 'Lê Hồ Hoài Bão', '0854557858', 'bao123456789', 'user');
 
+INSERT INTO `users` (`USERNAME`, `EMAIL`, `REALNAME`, `PHONENUM`, `PASSWORD`, `USER_TYPE`) VALUES
+('admin', 'admin@gmail.com' , 'Admin', '0123456789', 'password', 'admin');
