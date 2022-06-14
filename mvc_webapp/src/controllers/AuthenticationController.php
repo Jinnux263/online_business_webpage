@@ -16,7 +16,7 @@ class AuthenticationController extends BaseController
 
   public function login()
   {
-    $this->requireLogin();
+    $this->requireAuthenticated();
 
     // Check du lieu gui len, neu khong thi quay ve trang dang nhap
     if (isset($_POST['user']) && isset($_POST['password'])) {
@@ -64,7 +64,7 @@ class AuthenticationController extends BaseController
 
   public function register()
   {
-    $this->requireLogin();
+    $this->requireAuthenticated();
 
       // Check ca 4 truong gui len cua form
 
@@ -98,7 +98,7 @@ class AuthenticationController extends BaseController
   // }
 
   function requireAuthenticated() {
-    if (!$_SESSION['authenticated']) {
+    if ($_SESSION['authenticated']) {
       header('Location:/mvc_webapp/public/index.php');
       return;
     }
