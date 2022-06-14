@@ -10,7 +10,7 @@ class NewsModel {
     public $newsList;
 
     function __construct() {
-        $postList = [];
+        $newsList = [];
 
     // == TEST PURPOSE ==
     $titleList = [
@@ -42,8 +42,10 @@ class NewsModel {
     ];
 
     for ($i = 0; $i < 4; $i++)
-      $postList[$i] = new postDetail($titleList[$i], $dateList[$i], $contentList[$i], $imgList[$i]);
-    $this->newsList = $postList;
+      $newsList[$i] = new newsDetail($titleList[$i], $dateList[$i], $contentList[$i], $imgList[$i]);
+
+
+    $this->newsList = $newsList;
     }
 
     function getALl() {

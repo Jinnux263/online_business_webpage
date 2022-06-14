@@ -29,17 +29,18 @@
             <div id="content">
                 <div class="newsContainer">
                     <?php
-                        foreach ($postList as $idx=>$e) {
-                            echo "
-                            <div class='news'>
-                                <div class='newsPreview' style='background: url(".$e->postImg.") center center/cover'></div>
-                                <div class='newsContent'>
-                                    <div class='newsHeading'>".$e->postTitle."</div>
-                                    <div class='newsDate'>".$e->postDate."</div>
-                                    <div class='newsDesc'>".$e->postContent."</div>
-                                </div>
-                            </div>";
-                        }
+                    // print_r($newsList);
+                    foreach ($newsList as $e) {
+                        echo "
+                        <div class='news'>
+                            <div class='newsPreview' style='background: url(".$e->newsImg.") center center/cover'></div>
+                            <div class='newsContent'>
+                                <div class='newsHeading'>".$e->newsTitle."</div>
+                                <div class='newsDate'>".$e->newsDate."</div>
+                                <div class='newsDesc'>".$e->newsContent."</div>
+                            </div>
+                        </div>";
+                    }
                     ?>
                 </div>
                 <!-- <div class="newsNavigator">

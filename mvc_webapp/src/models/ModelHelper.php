@@ -49,19 +49,19 @@ class userDetail
   }
 }
 
-class billDetail
-{
-  public $servicesName;
-  public $billId;
-  public $billDate;
+// class billDetail
+// {
+//   public $servicesName;
+//   public $billId;
+//   public $billDate;
 
-  public function __construct($name, $id, $date)
-  {
-    $this->servicesName = $name;
-    $this->billId = $id;
-    $this->billDate = $date;
-  }
-}
+//   public function __construct($name, $id, $date)
+//   {
+//     $this->servicesName = $name;
+//     $this->billId = $id;
+//     $this->billDate = $date;
+//   }
+// }
 
 class customerDetail
 {
@@ -93,31 +93,31 @@ class billAdminDetail
   }
 }
 
-class newsPreview
+// class newsPreview
+// {
+//   public $newsTitle;
+//   public $newsImg;
+
+//   public function __construct($title, $img)
+//   {
+//     $this->newsTitle = $title;
+//     $this->newsImg = $img;
+//   }
+// }
+
+class newsDetail
 {
   public $newsTitle;
+  public $newsDate;
+  public $newsContent;
   public $newsImg;
-
-  public function __construct($title, $img)
-  {
-    $this->newsTitle = $title;
-    $this->newsImg = $img;
-  }
-}
-
-class postDetail
-{
-  public $postTitle;
-  public $postDate;
-  public $postContent;
-  public $postImg;
 
   public function __construct($title, $date, $content, $img)
   {
-    $this->postTitle = $title;
-    $this->postDate = $date;
-    $this->postContent = $content;
-    $this->postImg = $img;
+    $this->newsTitle = $title;
+    $this->newsDate = $date;
+    $this->newsContent = $content;
+    $this->newsImg = $img;
   }
 }
 

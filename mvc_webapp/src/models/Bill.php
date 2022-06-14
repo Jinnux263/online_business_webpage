@@ -14,9 +14,9 @@ class BillModel {
     {
         $billList = [];
 
-    // == TEST PURPOSE ==
-        for ($i = 0; $i < 5; $i++)
-        $billList[$i] = new billDetail("Dịch vụ tư vấn tâm lý trực tiếp", "#009849", "12/2/2022");
+        for ($i = 0; $i < 5; $i++) {
+            $billList[$i] = new billAdminDetail("Dịch vụ tư vấn tâm lý trực tiếp", "#009849", "12/2/2022", "Lê Van Dovious Panda", "dvs_pd@ppy.sh", "0727 727 727");
+        }
         
         $this->billsList = $billList;
     }

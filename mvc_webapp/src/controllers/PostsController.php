@@ -21,9 +21,9 @@ class PostsController extends BaseController
 
     // A list of postDetail given by the database
     $newsModel = new NewsModel();
-    $postList = $newsModel->getAll();
+    $newsList = $newsModel->getAll();
 
-    $data = array('postList' => $postList);
+    $data = array('newsList' => $newsList);
     $this->render('NewsScreen', $data);
   }
 
