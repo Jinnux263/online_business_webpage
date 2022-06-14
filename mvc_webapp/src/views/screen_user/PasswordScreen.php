@@ -42,7 +42,7 @@
                     <div class="option" onclick="navigate('UserController','password')">Thay đổi mật khẩu</div>
                     <div class="option logout" onclick="logout()">Đăng xuất</div>
                 </div>
-                <form action="" method="post" class="settingsContent">
+                <form action="/mvc_webapp/public/index.php?controller=UserController&action=passwordChange" method="post" class="settingsContent">
                     <div class="headingSection">
                         <div class="settingsHeading">Thay đổi mật khẩu</div>
                         <div class="settingsDesc">Chỉnh sửa thông tin mật khẩu của bạn</div>

@@ -47,7 +47,7 @@
                         <div class="settingsHeading">Thông tin tài khoản</div>
                         <div class="settingsDesc">Chỉnh sửa thông tin tài khoản của bạn</div>
                     </div>
-                    <form action="" method="post" class="innerSection">
+                    <form action="/mvc_webapp/public/index.php?controller=UserController&action=userDataChange" method="post" class="innerSection">
                         <div class="optionRow">
                             <div class="label">Tên đăng nhập</div>
                             <div class="optionContent"><?php echo $userData->userName; ?></div>

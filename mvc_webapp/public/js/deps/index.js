@@ -104,15 +104,22 @@ logout = () => {
     navigate("HomeController", "index");
 }
 
-removeBox = (e) => {
+removeBoxService = (e) => {
     e.parentNode.remove();
 }
 
-createInput = (id, className, val) => {
+removeBoxPost = (e) => {
+    e.parentNode.remove();
+}
+
+createInput = (id, className, name) => {
     let tmp = document.createElement("input");
     tmp.setAttribute("id", id);
+    tmp.setAttribute("name", name);
     tmp.setAttribute("class", className);
-    tmp.setAttribute("value", val);
+
+    if (name === "servicesId")
+        tmp.setAttribute("readonly", "");
 
     return tmp;
 }
@@ -127,14 +134,16 @@ createLabel = (text, idx) => {
 
 addServicesBox = () => {
     let idx = document.querySelectorAll("[id*=servicesName]").length + 1;
-    let box = document.createElement("div");
+    let box = document.createElement("form");
+    box.setAttribute("method", "post")
+    box.setAttribute("action", "");
     box.setAttribute("class", "servicesBox");
 
-    let sId = createInput(`servicesId-${idx}`, "servicesInput", ``);
-    let sName = createInput(`servicesName-${idx}`, "servicesInput", ``);
-    let sDesc = createInput(`servicesDesc-${idx}`, "servicesInput", ``);
-    let sPrice = createInput(`servicesPrice-${idx}`, "servicesInput", ``);
-    let sImg = createInput(`servicesImg-${idx}`, "servicesInput", ``);
+    let sId = createInput(`servicesId-${idx}`, "servicesInput", `servicesId`);
+    let sName = createInput(`servicesName-${idx}`, "servicesInput", `servicesName`);
+    let sDesc = createInput(`servicesDesc-${idx}`, "servicesInput", `servicesDesc`);
+    let sPrice = createInput(`servicesPrice-${idx}`, "servicesInput", `servicesPrice`);
+    let sImg = createInput(`servicesImg-${idx}`, "servicesInput", `servicesImg`);
 
     let labelId = createLabel("Id dịch vụ", idx - 1);
     let labelName = createLabel("Tên dịch vụ", idx - 1);
@@ -150,7 +159,7 @@ addServicesBox = () => {
 
     let remover = document.createElement("div");
     remover.setAttribute("class", "remover");
-    remover.setAttribute("onclick", "removeBox(this)");
+    remover.setAttribute("onclick", "removeBoxService(this)");
     remover.innerText = '-';
 
     box.append(labelId, sId, labelName, sName, labelDesc, sDesc, labelPrice, sPrice, labelImg, sImg, save, remover);

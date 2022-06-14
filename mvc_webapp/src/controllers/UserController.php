@@ -139,4 +139,40 @@ class UserController extends BaseController
     AuthenticationController::requireLogin();
     $this->render('UserScreen');
   }
+
+  // Start of account database change 
+
+  public function userDataChange() {
+    if (isset($_POST['realName']) || isset($_POST['email']) || isset($_POST['tel'])) {
+      // Make changes to user data on database
+    }
+  }
+
+  public function passwordChange() {
+    if (isset($_POST['oldPwd']) && isset($_POST['newPwd']) && isset($_POST['confPwd'])) {
+      // Make changes to password data on database
+    }
+  }
+
+  public function servicesChange() {
+    if (isset($_POST['servicesId'])) {
+      // Make changes to services data
+
+      // Delete service
+      if (isset($_POST['deleteServices'])) {
+
+      }
+    }
+  }
+
+  public function postChange() {
+    if (isset($_POST['postId'])) {
+      // Make changes to post data
+
+      // Delete post
+      if (isset($_POST['deletePost'])) {
+        
+      }
+    }
+  }
 }
