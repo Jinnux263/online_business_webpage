@@ -160,6 +160,7 @@ addServicesBox = () => {
 
 post = () => {
     let postTitle = document.getElementById("postTitle").value;
+    let postImg = document.getElementById("postImg").value;
     let postContent = sceditor.instance(textArea).fromBBCode(sceditor.instance(textArea).val(), true);
 
     $.ajax({
@@ -167,7 +168,8 @@ post = () => {
         url: "",
         data: {
             title: postTitle,
-            content: postContent
+            content: postContent,
+            img: postImg
         }
     })
 }
