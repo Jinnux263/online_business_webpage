@@ -108,11 +108,14 @@ removeBox = (e) => {
     e.parentNode.remove();
 }
 
-createInput = (id, className, val) => {
+createInput = (id, className, name) => {
     let tmp = document.createElement("input");
     tmp.setAttribute("id", id);
+    tmp.setAttribute("name", name);
     tmp.setAttribute("class", className);
-    tmp.setAttribute("value", val);
+
+    if (name === "servicesId")
+        tmp.setAttribute("readonly", "");
 
     return tmp;
 }
@@ -132,11 +135,11 @@ addServicesBox = () => {
     box.setAttribute("action", "");
     box.setAttribute("class", "servicesBox");
 
-    let sId = createInput(`servicesId`, "servicesInput", ``);
-    let sName = createInput(`servicesName`, "servicesInput", ``);
-    let sDesc = createInput(`servicesDesc`, "servicesInput", ``);
-    let sPrice = createInput(`servicesPrice`, "servicesInput", ``);
-    let sImg = createInput(`servicesImg`, "servicesInput", ``);
+    let sId = createInput(`servicesId-${idx}`, "servicesInput", `servicesId`);
+    let sName = createInput(`servicesName-${idx}`, "servicesInput", `servicesName`);
+    let sDesc = createInput(`servicesDesc-${idx}`, "servicesInput", `servicesDesc`);
+    let sPrice = createInput(`servicesPrice-${idx}`, "servicesInput", `servicesPrice`);
+    let sImg = createInput(`servicesImg-${idx}`, "servicesInput", `servicesImg`);
 
     let labelId = createLabel("Id dịch vụ", idx - 1);
     let labelName = createLabel("Tên dịch vụ", idx - 1);
